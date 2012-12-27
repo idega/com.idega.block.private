@@ -1,3 +1,3 @@
 [submodule "is.idega.idegaweb.egov.parking"]
 	path = is.idega.idegaweb.egov.parking
-	url = https://github.com/idega/is.idega.idegaweb.egov.parking.git
+	url = git@github.com:idega/is.idega.idegaweb.egov.parking.git
