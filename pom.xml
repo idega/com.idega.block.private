@@ -47,10 +47,9 @@
 	<module>is.idega.idegaweb.egov.iptv</module>
 	<module>com.idega.telecom</module>
 	<module>is.idega.block.pki</module>
-	<module>is.idega.idegaweb.campus</module>
 	<module>is.idega.idegaweb.egov.afterschoolcare</module>
 	<module>is.idega.idegaweb.egov.blueprints</module>
-	<module>is.idega.idegaweb.egov.healthcare</module>
+	<module>is.mentor.vefthjonusta</module>
   </modules>
 
   <dependencyManagement>
@@ -231,12 +230,6 @@
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
-  		  <artifactId>is.idega.idegaweb.campus</artifactId>
-  		  <version>4.1.3-SNAPSHOT</version>
-	      <type>jar</type>
-	    </dependency>
-	    <dependency>
-	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.afterschoolcare</artifactId>
   		  <version>4.1.3-SNAPSHOT</version>
 	      <type>jar</type>
@@ -248,8 +241,8 @@
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
-	      <groupId>com.idega.block.private</groupId>
-  		  <artifactId>is.idega.idegaweb.egov.healthcare</artifactId>
+	      <groupId>com.idega.block.egov</groupId>
+  		  <artifactId>is.mentor.vefthjonusta</artifactId>
   		  <version>4.1.3-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
