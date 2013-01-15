@@ -18,8 +18,8 @@
   <description>Parent of all com.idega.block.private group modules</description>
   
   <modules>
-	<module>is.idega.idegaweb.egov.parking</module>
 	<module>com.idega.municipality</module>
+	<module>is.idega.idegaweb.egov.parking</module>
 	<module>is.idega.idegaweb.egov.health.directorate</module>
 	<module>is.idega.idegaweb.egov.musicschool</module>
 	<module>is.idega.idegaweb.egov.gumbo</module>
@@ -54,15 +54,15 @@
 
   <dependencyManagement>
 	<dependencies>
-		<dependency>
+	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
-  		  <artifactId>is.idega.idegaweb.egov.parking</artifactId>
-  		  <version>4.1.3-SNAPSHOT</version>
+  		  <artifactId>com.idega.municipality</artifactId>
+  		  <version>5.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
-  		  <artifactId>com.idega.municipality</artifactId>
+  		  <artifactId>is.idega.idegaweb.egov.parking</artifactId>
   		  <version>4.1.3-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
