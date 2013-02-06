@@ -94,3 +94,6 @@
 [submodule "is.mentor.vefthjonusta"]
 	path = is.mentor.vefthjonusta
 	url = git@github.com:idega/is.mentor.vefthjonusta.git
+[submodule "com.idega.travel"]
+	path = com.idega.travel
+	url = git@github.com:idega/com.idega.travel.git
