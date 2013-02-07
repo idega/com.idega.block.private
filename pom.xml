@@ -19,8 +19,9 @@
   
   <modules>
 	<module>com.idega.municipality</module>
-	<module>is.idega.idegaweb.egov.parking</module>
+	<module>com.idega.travel</module>
 	<module>is.idega.idegaweb.egov.health.directorate</module>
+	<module>is.idega.idegaweb.egov.parking</module>
 	<module>is.idega.idegaweb.egov.musicschool</module>
 	<module>is.idega.idegaweb.egov.gumbo</module>
 	<module>is.idega.idegaweb.egov.impra</module>
@@ -244,6 +245,12 @@
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.mentor.vefthjonusta</artifactId>
   		  <version>4.1.3-SNAPSHOT</version>
+	      <type>jar</type>
+	    </dependency>
+	    <dependency>
+	      <groupId>com.idega.block.private</groupId>
+  		  <artifactId>com.idega.travel</artifactId>
+  		  <version>5.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	</dependencies>
