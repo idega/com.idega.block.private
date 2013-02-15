@@ -55,9 +55,9 @@
 [submodule "is.idega.idegaweb.egov.course.weighers"]
 	path = is.idega.idegaweb.egov.course.weighers
 	url = git@github.com:idega/is.idega.idegaweb.egov.course.weighers.git
-[submodule "com.idega.egov"]
-	path = com.idega.egov
-	url = git@github.com:idega/com.idega.egov.git
+[submodule "com.idega.egov.hub"]
+	path = com.idega.egov.hub
+	url = git@github.com:idega/com.idega.egov.hub.git
 [submodule "is.idega.idegaweb.golf.block.login"]
 	path = is.idega.idegaweb.golf.block.login
 	url = git@github.com:idega/is.idega.idegaweb.golf.block.login.git
