@@ -37,7 +37,6 @@
 	<module>is.idega.travel</module>
 	<module>is.idega.idegaweb.egov.afterschoolcare.rvk</module>
 	<module>is.idega.idegaweb.egov.course.weighers</module>
-	<module>com.idega.egov.hub</module>
 	<module>is.idega.idegaweb.golf.block.login</module>
 	<module>is.idega.idegaweb.golf.block.image</module>
 	<module>is.idega.idegaweb.egov.propertytax</module>
@@ -166,12 +165,6 @@
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.course.weighers</artifactId>
-  		  <version>4.1.3-SNAPSHOT</version>
-	      <type>jar</type>
-	    </dependency>
-	    <dependency>
-	      <groupId>com.idega.block.private</groupId>
-  		  <artifactId>com.idega.egov.hub</artifactId>
   		  <version>4.1.3-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
