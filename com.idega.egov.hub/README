@@ -1,0 +1,1 @@
+This is a proxy between Idega's eGov environment and X-Road servers. This proxy includes all the servers that will be invoked by Citizen eHub clients via X-Road

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<div
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+   	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:content="http://xmlns.idega.com/com.idega.content"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ic="http://xmlns.idega.com/com.idega.core"
+	xmlns:iuser="http://xmlns.idega.com/com.idega.user"
+	xmlns="http://www.w3.org/1999/xhtml" >
+	<form class="inputs">
+		<label for="serviceId">#{localizedStrings['com.idega.egov']['service_id']}</label>
+		<input type="text" id="serviceId" value="1" name="serviceId" />
+		<label for="userId">#{localizedStrings['com.idega.egov']['user_id']}</label>
+		<input type="text" id="userId" value="2" name="userId" />
+		<input type="button" value="submit" onclick="RESHelPer.addService(this)"/>
+	</form>
+</div>
