@@ -20,6 +20,7 @@
   <modules>
 	<module>com.idega.municipality</module>
 	<module>com.idega.travel</module>
+	<module>is.idega.idegaweb.egov.nest</module>
 	<module>is.idega.idegaweb.egov.health.directorate</module>
 	<module>is.idega.idegaweb.egov.parking</module>
 	<module>is.idega.idegaweb.egov.musicschool</module>
@@ -30,7 +31,6 @@
 	<module>is.idega.idegaweb.egov.sweatshop</module>
 	<module>is.idega.idegaweb.egov.school</module>
 	<module>is.idega.idegaweb.egov.grub</module>
-	<module>is.idega.idegaweb.egov.nest</module>
 	<module>is.idega.idegaweb.egov.schoolmeal</module>
 	<module>is.idega.idegaweb.egov.childcare.rvk</module>
 	<module>is.idega.idegaweb.egov.childcare.linna</module>
@@ -50,6 +50,7 @@
 	<module>is.idega.idegaweb.egov.afterschoolcare</module>
 	<module>is.idega.idegaweb.egov.blueprints</module>
 	<module>is.mentor.vefthjonusta</module>
+  	<module>com.idega.egov.hub</module>
   </modules>
 
   <dependencyManagement>
@@ -60,6 +61,14 @@
   		  <version>5.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
+	    <dependency>
+	      <groupId>com.idega.block.private</groupId>
+  		  <artifactId>com.idega.travel</artifactId>
+  		  <version>5.0.0-SNAPSHOT</version>
+	      <type>jar</type>
+	    </dependency>
+	    
+	    <!-- Modules needs to be updated to version 5 -->
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.parking</artifactId>
@@ -242,19 +251,11 @@
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
-  		  <artifactId>com.idega.travel</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <artifactId>com.idega.egov.hub</artifactId>
+  		  <version>4.1.3-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	</dependencies>
   </dependencyManagement>
-
-  <distributionManagement>
-    <site>      
-      <id>idega1egov</id>
-      <name>idega Maven2 Documentation site</name>
-          <url>file:///var/www/webs/developer.idega.com/platform4/egov</url>
-    </site>
-  </distributionManagement>
 
 </project>
