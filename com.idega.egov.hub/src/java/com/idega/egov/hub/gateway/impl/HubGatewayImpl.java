@@ -1,4 +1,4 @@
-package com.idega.egov.hub.restful.impl;
+package com.idega.egov.hub.gateway.impl;
 
 import is.idega.idegaweb.egov.citizen.data.CitizenRemoteServices;
 import is.idega.idegaweb.egov.citizen.data.CitizenRemoteServicesHome;
@@ -22,16 +22,16 @@ import javax.ws.rs.core.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.idega.data.IDOLookup;
-import com.idega.egov.hub.EGovConstants;
+import com.idega.egov.hub.HubConstants;
 import com.idega.egov.hub.bean.ApplicationData;
 import com.idega.egov.hub.bean.Service;
 import com.idega.egov.hub.bean.request.ChangeItemValueRequest;
 import com.idega.egov.hub.bean.request.ServiceRequest;
 import com.idega.egov.hub.business.impl.ElectronicXRoadServices;
-import com.idega.egov.hub.restful.RestfulEGovServices;
+import com.idega.egov.hub.gateway.HubGateway;
 import com.idega.idegaweb.egov.bpm.data.dao.CasesBPMDAO;
 import com.idega.jbpm.artifacts.presentation.ProcessArtifacts;
-import com.idega.mobile.restful.DefaultRestfulService;
+import com.idega.restful.business.DefaultRestfulService;
 import com.idega.user.data.User;
 import com.idega.util.ListUtil;
 import com.idega.util.StringUtil;
@@ -43,8 +43,8 @@ import com.idega.xroad.business.XroadGateway;
 import com.idega.xroad.processes.bean.XRoadProcess;
 import com.idega.xroad.processes.business.XRoadProcessServices;
 
-@Path(EGovConstants.URI_SERVICE)
-public class RestfulEGovServicesImpl extends DefaultRestfulService implements RestfulEGovServices {
+@Path(HubConstants.URI_SERVICE)
+public class HubGatewayImpl extends DefaultRestfulService implements HubGateway {
 
 	@Autowired
 	private XRoadProcessServices xroadProcessesServices;
@@ -63,7 +63,7 @@ public class RestfulEGovServicesImpl extends DefaultRestfulService implements Re
 
 	@Override
 	@GET
-	@Path(EGovConstants.URI_GET_AVAILABLE_SERVICES)
+	@Path(HubConstants.URI_GET_AVAILABLE_SERVICES)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getAvailableServices(@QueryParam("userId") String userId) {
 		if (StringUtil.isEmpty(userId)) {
@@ -81,7 +81,7 @@ public class RestfulEGovServicesImpl extends DefaultRestfulService implements Re
 
 	@Override
 	@GET
-	@Path(EGovConstants.URI_GET_USER_MESSAGES)
+	@Path(HubConstants.URI_GET_USER_MESSAGES)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getMessagesByUser(@QueryParam("serviceId") String serviceId, @QueryParam("userId")String userId) {
 		if (StringUtil.isEmpty(serviceId) || StringUtil.isEmpty(userId)){
@@ -106,7 +106,7 @@ public class RestfulEGovServicesImpl extends DefaultRestfulService implements Re
 
 	@Override
 	@GET
-	@Path(EGovConstants.URI_GET_USER_CASES)
+	@Path(HubConstants.URI_GET_USER_CASES)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getCasesByUser(
 			@QueryParam("serviceId") String serviceId,
@@ -132,7 +132,7 @@ public class RestfulEGovServicesImpl extends DefaultRestfulService implements Re
 
 	@Override
 	@GET
-	@Path(EGovConstants.URI_GET_CASE_BY_ID_AND_USER)
+	@Path(HubConstants.URI_GET_CASE_BY_ID_AND_USER)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getCase(@QueryParam("serviceId") String serviceId, @QueryParam("userId")String userId, @QueryParam("caseId")  String caseId) {
 		if (StringUtil.isEmpty(serviceId) || StringUtil.isEmpty(userId) || StringUtil.isEmpty(caseId)){
@@ -157,7 +157,7 @@ public class RestfulEGovServicesImpl extends DefaultRestfulService implements Re
 
 	@Override
 	@GET
-	@Path(EGovConstants.URI_GET_SERVICES_BY_USER)
+	@Path(HubConstants.URI_GET_SERVICES_BY_USER)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getUserServices(@QueryParam("userId")String userId) {
 		if (StringUtil.isEmpty(userId)) {
@@ -191,7 +191,7 @@ public class RestfulEGovServicesImpl extends DefaultRestfulService implements Re
 
 	@Override
 	@POST
-	@Path(EGovConstants.URI_ADD_SERVICE_TO_USER)
+	@Path(HubConstants.URI_ADD_SERVICE_TO_USER)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response addServiceToUser(ServiceRequest request) {
@@ -213,7 +213,7 @@ public class RestfulEGovServicesImpl extends DefaultRestfulService implements Re
 	}
 
 	@GET
-	@Path(EGovConstants.URI_GET_UNREAD_CASES_BY_USER)
+	@Path(HubConstants.URI_GET_UNREAD_CASES_BY_USER)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Override
 	public Response getUnreadCasesByUser(@QueryParam("serviceId") String serviceId, @QueryParam("userId")String userId) {
@@ -236,7 +236,7 @@ public class RestfulEGovServicesImpl extends DefaultRestfulService implements Re
 	}
 
 	@GET
-	@Path(EGovConstants.URI_GET_UNREAD_MESSAGES_BY_USER)
+	@Path(HubConstants.URI_GET_UNREAD_MESSAGES_BY_USER)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Override
 	public Response getUnreadMessagesByUser(@QueryParam("serviceId") String serviceId, @QueryParam("userId")String userId) {
@@ -259,7 +259,7 @@ public class RestfulEGovServicesImpl extends DefaultRestfulService implements Re
 	}
 
 	@GET
-	@Path(EGovConstants.URI_GET_MESSAGE_BY_ID_AND_USER)
+	@Path(HubConstants.URI_GET_MESSAGE_BY_ID_AND_USER)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Override
 	public Response getMessage(
@@ -283,7 +283,7 @@ public class RestfulEGovServicesImpl extends DefaultRestfulService implements Re
 	}
 
 	@POST
-	@Path(EGovConstants.URI_SET_CASE_READ)
+	@Path(HubConstants.URI_SET_CASE_READ)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Override
@@ -311,7 +311,7 @@ public class RestfulEGovServicesImpl extends DefaultRestfulService implements Re
 	}
 
 	@POST
-	@Path(EGovConstants.URI_SET_MESSAGE_READ)
+	@Path(HubConstants.URI_SET_MESSAGE_READ)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Override
@@ -344,7 +344,7 @@ public class RestfulEGovServicesImpl extends DefaultRestfulService implements Re
 	}
 
 	@GET
-	@Path(EGovConstants.URI_GET_CASES_BY_CRITERIA)
+	@Path(HubConstants.URI_GET_CASES_BY_CRITERIA)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Override
 	public Response getCasesByCriteria(
@@ -407,7 +407,7 @@ public class RestfulEGovServicesImpl extends DefaultRestfulService implements Re
 
 	@Override
 	@POST
-	@Path(EGovConstants.URI_SUBMIT_APPLICATION)
+	@Path(HubConstants.URI_SUBMIT_APPLICATION)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response doSubmitApplication(ApplicationData data) {

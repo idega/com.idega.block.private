@@ -1,10 +1,10 @@
 package com.idega.egov.hub;
 
-public class EGovConstants {
+public class HubConstants {
 
-	public static final String IW_BUNDLE_IDENTIFIER = "com.idega.egov.hub";
+	public static final String IW_BUNDLE_IDENTIFIER = "com.idega.egov";
 
-	public static final String	URI_SERVICE = "/mobile/egov",
+	public static final String	URI_SERVICE = "/hub/egov",
 
 								// Services
 								URI_GET_AVAILABLE_SERVICES = "/services/available",

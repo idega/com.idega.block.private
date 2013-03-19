@@ -21,7 +21,7 @@ import org.springframework.stereotype.Service;
 import com.google.gson.Gson;
 import com.idega.core.business.DefaultSpringBean;
 import com.idega.dwr.business.DWRAnnotationPersistance;
-import com.idega.egov.hub.EGovConstants;
+import com.idega.egov.hub.HubConstants;
 import com.idega.egov.hub.bean.ApplicationData;
 import com.idega.egov.hub.bean.request.ChangeItemValueRequest;
 import com.idega.egov.hub.bean.request.ServiceRequest;
@@ -56,7 +56,7 @@ public class RestfulEGovServicesTest extends DefaultSpringBean implements DWRAnn
 		try {
 			Client client = new Client();
 
-			URIUtil uriUtil = new URIUtil(getHostAndPort() + EGovConstants.URI_SERVICE + EGovConstants.URI_GET_AVAILABLE_SERVICES);
+			URIUtil uriUtil = new URIUtil(getHostAndPort() + HubConstants.URI_SERVICE + HubConstants.URI_GET_AVAILABLE_SERVICES);
 			uriUtil.setParameter("userId", userId);
 			URI uri = new URI(uriUtil.getUri());
 
@@ -75,7 +75,7 @@ public class RestfulEGovServicesTest extends DefaultSpringBean implements DWRAnn
 		try {
 			Client client = new Client();
 
-			URIUtil uriUtil = new URIUtil(getHostAndPort() + EGovConstants.URI_SERVICE + requestUri);
+			URIUtil uriUtil = new URIUtil(getHostAndPort() + HubConstants.URI_SERVICE + requestUri);
 			URI uri = new URI(uriUtil.getUri());
 
 
@@ -117,7 +117,7 @@ public class RestfulEGovServicesTest extends DefaultSpringBean implements DWRAnn
 		try {
 			Client client = new Client();
 
-			URIUtil uriUtil = new URIUtil(getHostAndPort() + EGovConstants.URI_SERVICE + EGovConstants.URI_ADD_SERVICE_TO_USER);
+			URIUtil uriUtil = new URIUtil(getHostAndPort() + HubConstants.URI_SERVICE + HubConstants.URI_ADD_SERVICE_TO_USER);
 			URI uri = new URI(uriUtil.getUri());
 
 			WebResource webResource = client.resource(uri);
@@ -143,7 +143,7 @@ public class RestfulEGovServicesTest extends DefaultSpringBean implements DWRAnn
 		try {
 			Client client = new Client();
 
-			URIUtil uriUtil = new URIUtil(getHostAndPort() + EGovConstants.URI_SERVICE + EGovConstants.URI_SET_CASE_READ);
+			URIUtil uriUtil = new URIUtil(getHostAndPort() + HubConstants.URI_SERVICE + HubConstants.URI_SET_CASE_READ);
 			URI uri = new URI(uriUtil.getUri());
 
 			ChangeItemValueRequest<Boolean> changeItemValueRequest = new ChangeItemValueRequest<Boolean>();
@@ -174,7 +174,7 @@ public class RestfulEGovServicesTest extends DefaultSpringBean implements DWRAnn
 		try {
 			Client client = new Client();
 
-			URIUtil uriUtil = new URIUtil(getHostAndPort() + EGovConstants.URI_SERVICE + EGovConstants.URI_SET_MESSAGE_READ);
+			URIUtil uriUtil = new URIUtil(getHostAndPort() + HubConstants.URI_SERVICE + HubConstants.URI_SET_MESSAGE_READ);
 			URI uri = new URI(uriUtil.getUri());
 
 			ChangeItemValueRequest<Boolean> changeItemValueRequest = new ChangeItemValueRequest<Boolean>();
@@ -202,7 +202,7 @@ public class RestfulEGovServicesTest extends DefaultSpringBean implements DWRAnn
 	@RemoteMethod
 	public String doSubmitAppplication(String application, String user) {
 		try {
-			URIUtil util = new URIUtil(getHostAndPort() + EGovConstants.URI_SERVICE + EGovConstants.URI_SUBMIT_APPLICATION);
+			URIUtil util = new URIUtil(getHostAndPort() + HubConstants.URI_SERVICE + HubConstants.URI_SUBMIT_APPLICATION);
 			URI uri = new URI(util.getUri());
 
 			Client client = new Client();
@@ -239,11 +239,11 @@ public class RestfulEGovServicesTest extends DefaultSpringBean implements DWRAnn
 			return null;
 		}
 	}
-	
+
 	@RemoteMethod
 	public String getCasesList(String service, String userId) {
 		try {
-			URIUtil util = new URIUtil(getHostAndPort() + EGovConstants.URI_SERVICE + EGovConstants.URI_GET_USER_CASES);
+			URIUtil util = new URIUtil(getHostAndPort() + HubConstants.URI_SERVICE + HubConstants.URI_GET_USER_CASES);
 			util.setParameter("serviceId", service);
 			util.setParameter("userId", userId);
 			URI uri = new URI(util.getUri());

@@ -37,8 +37,8 @@ import com.idega.jbpm.artifacts.presentation.ProcessArtifacts;
 import com.idega.jbpm.exe.BPMDocument;
 import com.idega.jbpm.exe.BPMEmailDocument;
 import com.idega.jbpm.exe.ProcessInstanceW;
-import com.idega.mobile.restful.DefaultRestfulService;
 import com.idega.presentation.IWContext;
+import com.idega.restful.business.DefaultRestfulService;
 import com.idega.user.data.Group;
 import com.idega.user.data.GroupHome;
 import com.idega.user.data.User;
@@ -49,7 +49,8 @@ import com.idega.util.ListUtil;
 import com.idega.util.StringUtil;
 import com.idega.util.expression.ELUtil;
 import com.idega.xroad.bean.Document;
-import com.idega.xroad.bean.EmailDocument;
+import com.idega.xroad.bean.Email;
+import com.idega.xroad.bean.Task;
 import com.idega.xroad.business.CasesDataProvider;
 import com.idega.xroad.business.XroadGateway;
 
@@ -108,16 +109,16 @@ public class ElectronicXRoadServices extends DefaultRestfulService implements Xr
 		} catch (Exception e) {}
 
 		theCase.setTasks(Arrays.asList(
-			new Document("Task number 1", "Test User1", "www.citizenehub.com", theCase.getCreated()),
-			new Document("Task number 2", "Test User2", "www.citizenehub.com", theCase.getCreated())
+			new Task("1", "Task number 1", "www.citizenehub.com", theCase.getCreated()),
+			new Task("2", "Task number 2", "www.citizenehub.com", theCase.getCreated())
 		));
 		theCase.setDocuments(Arrays.asList(
-			new Document("Document number 1", "Test User1", "www.citizenehub.com", theCase.getCreated()),
-			new Document("Document number 2", "Test User2", "www.citizenehub.com", theCase.getCreated())
+			new Document("3", "Document number 1", "Test User1", "www.citizenehub.com", theCase.getCreated()),
+			new Document("4", "Document number 2", "Test User2", "www.citizenehub.com", theCase.getCreated())
 		));
 		theCase.setEmails(Arrays.asList(
-			new EmailDocument("Email number 1", "Test User1", "test1@citizenehub.com"),
-			new EmailDocument("Email number 2", "Test User2", "test2@citizenehub.com")
+			new Email("Email number 1", "Message for email nr. 1", "Test User1", "test1@citizenehub.com"),
+			new Email("Email number 2", "Message for email nr. 2", "Test User2", "test2@citizenehub.com")
 		));
 		theCase.setUsersConnectedToProcess(Arrays.asList(
 			new com.idega.xroad.bean.User("123", "test1@citizenehub.com", "789", "Test User1"),
@@ -223,7 +224,6 @@ public class ElectronicXRoadServices extends DefaultRestfulService implements Xr
 		return isThisService(serviceId) ? getCasesByUserFromThisHost(userId) : getGateway().getCasesByUser(serviceId, userId);
 	}
 
-	@SuppressWarnings("unchecked")
 	private Collection<com.idega.xroad.bean.Case> getCasesByUserFromThisHost(String userId) throws Exception{
 		if (StringUtil.isEmpty(userId))
 			throw new RuntimeException("User id is not specified");
@@ -261,9 +261,9 @@ public class ElectronicXRoadServices extends DefaultRestfulService implements Xr
 
 		//	Tasks
 		List<BPMDocument> bpmTasks = piW.getTaskDocumentsForUser(user, locale);
-		List<Document> tasks = new ArrayList<Document>(bpmTasks.size());
-		for (BPMDocument task : bpmTasks) {
-			Document taskDocument = new Document(task);
+		List<Task> tasks = new ArrayList<Task>(bpmTasks.size());
+		for (BPMDocument task: bpmTasks) {
+			Task taskDocument = new Task(task);
 			if (task.isHasViewUI()) {
 				String viewUri = openCasesUri + CoreConstants.AMP + CasesBPMAssetsState.TASK_INSTANCE_ID_PARAMETER +
 						CoreConstants.EQ + task.getTaskInstanceId();
@@ -273,11 +273,11 @@ public class ElectronicXRoadServices extends DefaultRestfulService implements Xr
 		}
 
 		//	Documents
-		List <BPMDocument> bpmDocuments = piW.getSubmittedDocumentsForUser(user, locale);
-		List <Document> documents = new ArrayList<Document>(bpmDocuments.size());
-		for(BPMDocument bpmDocument : bpmDocuments){
+		List<BPMDocument> bpmDocuments = piW.getSubmittedDocumentsForUser(user, locale);
+		List<Document> documents = new ArrayList<Document>(bpmDocuments.size());
+		for(BPMDocument bpmDocument: bpmDocuments){
 			Document document = new Document(bpmDocument);
-			if(bpmDocument.isHasViewUI()){
+			if (bpmDocument.isHasViewUI()) {
 				String viewUri = openCasesUri + CoreConstants.AMP + CasesBPMAssetsState.TASK_INSTANCE_ID_PARAMETER +
 						CoreConstants.EQ  + bpmDocument.getTaskInstanceId();
 				document.setViewUri(viewUri);
@@ -286,16 +286,16 @@ public class ElectronicXRoadServices extends DefaultRestfulService implements Xr
 		}
 
 		//	Emails
-		List<BPMEmailDocument> bpmEmailDocuments = piW.getAttachedEmails(user);
-		List <EmailDocument> emails = new ArrayList<EmailDocument>(bpmDocuments.size());
-		for (BPMEmailDocument bpmDocument : bpmEmailDocuments) {
-			EmailDocument emailDocument = new EmailDocument(bpmDocument);
+		List<BPMEmailDocument> bpmEmailDocuments = piW.getAttachedEmails(user, true);
+		List<Email> emails = new ArrayList<Email>(bpmDocuments.size());
+		for (BPMEmailDocument bpmDocument: bpmEmailDocuments) {
+			Email email = new Email(bpmDocument);
 			if (bpmDocument.isHasViewUI()) {
 				String viewUri = openCasesUri + CoreConstants.AMP + CasesBPMAssetsState.TASK_INSTANCE_ID_PARAMETER +
 						CoreConstants.EQ  + bpmDocument.getTaskInstanceId();
-				emailDocument.setViewUri(viewUri);
+				email.setViewUri(viewUri);
 			}
-			documents.add(emailDocument);
+			emails.add(email);
 		}
 
 		Collection<User> connectedUsers = processArtifacts.getUsersConnectedToProces(piW);
@@ -303,7 +303,7 @@ public class ElectronicXRoadServices extends DefaultRestfulService implements Xr
 		caseToSend.setTasks(tasks);
 		caseToSend.setDocuments(documents);
 		caseToSend.setEmails(emails);
-		caseToSend.setIdegaUsersConnectedToProcess(connectedUsers);
+		caseToSend.setUsersConnectedToProcess(connectedUsers);
 		return caseToSend;
 	}
 

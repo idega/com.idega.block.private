@@ -1,4 +1,4 @@
-package com.idega.egov.hub.restful;
+package com.idega.egov.hub.gateway;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import com.idega.xroad.processes.bean.XRoadProcess;
  * @author valdas
  *
  */
-public interface RestfulEGovServices {
+public interface HubGateway {
 
 	/**
 	 * Returns collection of available services {@link XRoadProcess}, GET: /mobile/egov/services/available
