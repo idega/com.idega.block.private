@@ -1,8 +1,0 @@
-com.idega.egov
-com.idega.egov.bean
-com.idega.egov.bean.request
-com.idega.egov.business.impl
-com.idega.egov.restful
-com.idega.egov.restful.impl
-com.idega.egov.test
-com.idega.egov.test.presentation
