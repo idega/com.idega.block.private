@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<div 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	>
+	<ui:composition template="#{IWURIResource.res['/idegaweb/bundles/is.idega.idegaweb.egov.reykjavik.bundle/facelets/reykiavik-form-template.xhtml']}">
+		<ui:define name="process-content">
+			<div class="fbc_header_text" >
+				<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['closest_relative']}:</span></span>
+			</div>
+	 		<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['name']}
+					<span class="required-symbol">*</span>
+				</label>
+				<input name="string_relativeName" type="text" value="#{reykjavikFormRequestBean.data.relativeName}" class="value" ></input>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['phone']}
+					<span class="required-symbol">*</span>
+				</label>
+				<input name="string_relativePhone" type="text" value="#{reykjavikFormRequestBean.data.relativePhone}" class="value" ></input>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['relationship']}
+					<span class="required-symbol">*</span>
+				</label>
+				<input name="string_relationship" type="text" value="#{reykjavikFormRequestBean.data.relationship}" class="value" ></input>
+			</div>
+			<h:panelGroup 
+				layout="block" 
+				styleClass="fbc_header_text">
+				<span 
+					class="output string enabled readwrite optional valid">
+					<h:outputText
+						value="#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['reykjavik.required_evening_and_weekend_service_for_folowing_days']}"/>
+				</span>
+			</h:panelGroup>
+			<div class="group" id="objlist_daysOfServices">
+				<table class="repeat">
+					<tbody>
+						<ui:repeat value="#{reykjavikFormRequestBean.data.allDaysData}" var="data">
+							<ui:fragment rendered="#{(not reykjavikFormRequestBean.pdf) or (data.filled)}">
+								<tr class="repeat-item">
+									<td>
+										<div class="input">
+											<ui:fragment rendered="#{not reykjavikFormRequestBean.pdf}">
+												<ui:fragment rendered="#{data.filled}" >
+												<input  type="checkbox" class="value check-row" checked="true" style="width:auto!important;"></input>
+												</ui:fragment>
+												<ui:fragment rendered="#{!data.filled}">
+													<input  type="checkbox"  class="value check-row" style="width:auto!important;" ></input>
+												</ui:fragment>
+											</ui:fragment>
+										</div>
+									</td>
+									<td>
+										<div class="output">
+									        <label class="output" >#{data.name}</label>
+									    </div>
+									</td>
+									<td>
+										<div class="output hide-item">
+											<label class="output" >#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['reykjavik.from']}</label>
+										</div>
+									</td>
+									<td>
+										<div class="input hide-item">
+											<input type="text" value="#{data.from}" class="from-time value xFormInputMask_time" ></input>
+										</div>
+									</td>
+									<td>
+										<div class="output hide-item">
+											<label class="output">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['reykjavik.to']}</label>
+										</div>
+									</td>
+									<td>
+										<div class="input hide-item">
+											<input type="text" value="#{data.to}" class="to-time value xFormInputMask_time" ></input>
+										</div>
+									</td>
+								</tr>
+							</ui:fragment>
+						</ui:repeat>
+					</tbody>
+				</table>
+			</div>
+			<!-- Services header -->
+			<h:panelGroup 
+				layout="block"
+				styleClass="fbc_header_text">
+				<span 
+					class="output string enabled readwrite optional valid">
+					<h:outputText
+						value="#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['reykjavik.current_applicant_services']}"/>
+				</span>
+			</h:panelGroup>
+			
+			<!-- Services -->
+			<ui:include src="#{IWURIResource.res['/idegaweb/bundles/is.idega.idegaweb.egov.reykjavik.bundle/facelets/current-services.xhtml']}" />
+			
+			<!-- Comments -->
+			<h:panelGroup 
+				layout="block"
+				styleClass="fbc_header_text">
+				<span 
+					class="output">
+					<h:outputText
+						value="#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['reykjavik.comments']}"/>
+				</span>
+			</h:panelGroup>
+			
+			<h:panelGroup
+				layout="block"
+		        styleClass="textarea">
+		        <h:inputTextarea
+		        	style="width:100%!important;height:20.5em"
+					styleClass="value"
+					value="#{reykjavikFormRequestBean.data.comments}"
+					id="#{reykjavikFormRequestBean.data.variableNameComments}" />
+		    </h:panelGroup>
+		    
+		    <!-- License -->
+		    <h:panelGroup 
+				layout="block"
+				styleClass="fbc_header_text">
+				<span 
+					class="output string enabled readwrite optional valid">
+					<h:outputText
+						value="#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['reykjavik.license']}"/>
+				</span>
+			</h:panelGroup>
+			<script>
+			var messages = {
+					string_relativeName : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_relative_name']}',
+					string_relativePhone : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_relative_phone']}',
+					string_relationship : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_relationship']}'
+			};
+			var rules = {
+					string_relativeName : 'required',
+					string_relativePhone : 'required',
+					string_relationship : 'required'
+			};
+			ReykjavikForms.messages.validation = jQuery.extend(ReykjavikForms.messages.validation,messages);
+			ReykjavikForms.validationRules = jQuery.extend(ReykjavikForms.validationRules,rules);
+				jQuery(document).ready(function(){
+					ReykjavikForms.createWeekList('#objlist_daysOfServices');
+				});
+			</script>
+		</ui:define>
+	</ui:composition>	
+</div>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<div 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:icore="http://xmlns.idega.com/com.idega.core"
+	xmlns:content="http://xmlns.idega.com/com.idega.content"
+	>
+	<ui:composition template="#{IWURIResource.res['/idegaweb/bundles/is.idega.idegaweb.egov.reykjavik.bundle/facelets/reykiavik-form-template.xhtml']}">
+ 		<ui:define name="process-content">
+			<ui:include src="#{IWURIResource.res['/idegaweb/bundles/is.idega.idegaweb.egov.reykjavik.bundle/facelets/marital-status.xhtml']}" />
+			<div class="fbc_header_text" >
+				<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['spouse/cohabiting_partner']}:</span></span>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['name']}
+				</label>
+				<input name="string_spouseName" type="text" value="#{reykjavikFormRequestBean.data.spouseName}" class="value" ></input>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['personal_id']}
+				</label>
+				<input name="string_spousePersonalId" type="text" value="#{reykjavikFormRequestBean.data.spousePersonalId}" class="value" ></input>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['occupation']}
+				</label>
+				<input name="string_spouseOccupation" type="text" value="#{reykjavikFormRequestBean.data.spouseOccupation}" class="value" ></input>
+			</div>
+			<div class="fbc_header_text" >
+				<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['If_applying_for_a_child']}:</span></span>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['child_name']}
+				</label>
+				<input name="string_childName" type="text" value="#{reykjavikFormRequestBean.data.childName}" class="value" ></input>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['personal_id']}
+				</label>
+				<input name="string_childPersonalId" type="text" value="#{reykjavikFormRequestBean.data.childPersonalId}" class="value" ></input>
+			</div>
+			<div class="fbc_header_text" >
+				<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['children_at_home']}:</span></span>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['children_amount']}
+				</label>
+				<input name="long_childrenAmount" type="text" value="#{reykjavikFormRequestBean.data.childrenAmount}" class="value" ></input>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['child_birth_date']}
+				</label>
+				<icore:datePicker keepStatus="true" inputName="date_childBirthDate" initialDate="#{reykjavikFormRequestBean.data.childBirthDate}" styleClass="value" ></icore:datePicker>
+				<!--<input name="date_childBirthDate" type="text" value="#{reykjavikFormRequestBean.data.childBirthDate}" class="value" ></input>-->
+			</div>
+			<div class="fbc_header_text" >
+				<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['doctor']}:</span></span>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['doctor_name']}
+				</label>
+				<input name="string_doctorName" type="text" value="#{reykjavikFormRequestBean.data.doctorName}" class="value" ></input>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['doctor_phone']}
+				</label>
+				<input name="string_doctorPhone" type="text" value="#{reykjavikFormRequestBean.data.doctorPhone}" class="value" ></input>
+			</div>
+			<div class="fbc_header_text" >
+				<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['contacts']}:</span></span>
+			</div>
+			<ui:include src="#{IWURIResource.res['/idegaweb/bundles/is.idega.idegaweb.egov.reykjavik.bundle/facelets/contact-list.xhtml']}" />
+		</ui:define>
+		<ui:define name="more-pages">
+			<div class="case">
+				<div class="fbc_header_text" >
+					<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['domestic_conditions']}:</span></span>
+				</div>
+				<div class="threeColumns">
+					<div class="select">
+						<label class="label" >
+							#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['is_smoking_at_home']}
+							<span class="required-symbol">*</span>
+						</label>
+						<span>	
+							<span class="selector-item">
+									<ui:fragment rendered="#{reykjavikFormRequestBean.data.smokingAtHome}" >
+										<input name="string_isSmokingAtHome" type="radio" value="Y" class="value" checked="true"></input>
+									</ui:fragment>
+									<ui:fragment rendered="#{!reykjavikFormRequestBean.data.smokingAtHome}">
+										<input name="string_isSmokingAtHome" type="radio" value="Y"  class="value" ></input>
+									</ui:fragment>
+									<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['yes']}</span>
+							</span>
+							<span class="selector-item">
+								<ui:fragment rendered="#{!reykjavikFormRequestBean.data.smokingAtHome}" >
+										<input name="string_isSmokingAtHome" type="radio" value="N" class="value" checked="true"></input>
+									</ui:fragment>
+									<ui:fragment rendered="#{reykjavikFormRequestBean.data.smokingAtHome}">
+										<input name="string_isSmokingAtHome" type="radio" value="N"  class="value" ></input>
+									</ui:fragment>
+								<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['No']}</span>
+							</span>
+						</span>
+					</div>
+				</div>
+				<div class="threeColumns">
+					<div class="select">
+						<label class="label" >
+							#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['are_pets_at_home']}:
+							<span class="required-symbol">*</span>
+						</label>
+						<span>
+							<span class="selector-item">
+									<ui:fragment rendered="#{reykjavikFormRequestBean.data.petsAtHome}" >
+										<input name="string_isPetsAtHome" type="radio" value="Y" class="value" checked="true"></input>
+									</ui:fragment>
+									<ui:fragment rendered="#{!reykjavikFormRequestBean.data.petsAtHome}">
+										<input name="string_isPetsAtHome" type="radio" value="Y"  class="value" ></input>
+									</ui:fragment>
+									<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['yes']}</span>
+							</span>
+							<span class="selector-item">
+								<ui:fragment rendered="#{!reykjavikFormRequestBean.data.petsAtHome}" >
+										<input name="string_isPetsAtHome" type="radio" value="N" class="value" checked="true"></input>
+									</ui:fragment>
+									<ui:fragment rendered="#{reykjavikFormRequestBean.data.petsAtHome}">
+										<input name="string_isPetsAtHome" type="radio" value="N"  class="value" ></input>
+									</ui:fragment>
+								<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['No']}</span>
+							</span>
+						</span>
+					</div>
+				</div>
+				<div class="textarea">
+					<label class="label" >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['what_assistance_and_why']}:
+						<span class="required-symbol">*</span>
+					</label>
+					<textarea class="value xFormTextAreaWordMask_limit-initialized" cols="30" rows="5" name="string_assistanceDescription" >#{reykjavikFormRequestBean.data.assistanceDescription}</textarea>
+				</div>
+				<ui:include src="#{IWURIResource.res['/idegaweb/bundles/is.idega.idegaweb.egov.reykjavik.bundle/facelets/current-services.xhtml']}" />
+				<div class="textarea">
+					<label class="label" >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['another_applicant']}:
+					</label>
+					<textarea class="value xFormTextAreaWordMask_limit-initialized" cols="30" rows="5" name="string_anotherApplicant" >#{reykjavikFormRequestBean.data.anotherApplicant}</textarea>
+				</div>
+			</div>
+			<div class="case">
+				<div class="fbc_header_text" >
+					<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['attachments']}:</span></span>
+				</div>
+				#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['the_application_shall_include']}:<br/>
+				#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['physician']}
+				<ui:include src="#{IWURIResource.res['/idegaweb/bundles/is.idega.idegaweb.egov.reykjavik.bundle/facelets/uploader.xhtml']}" />
+				#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['I_certify_that_all_information_in_connection_with_this_application']}
+			</div>
+			<div class="case preview">
+			</div>
+			<script>
+				var messages = {
+						string_maritalStatus : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_select']}',
+						string_isSmokingAtHome       : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_select']}',
+						string_isPetsAtHome        : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_select']}',
+						string_assistanceDescription  : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_what_assistance_you_need_and_why']}',
+						long_childrenAmount			: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_valid_number']}'
+				}; 
+				var rules = {
+						string_maritalStatus : 'required',
+						string_isSmokingAtHome       : 'required',
+						string_isPetsAtHome        : 'required',
+						string_assistanceDescription  : 'required',
+						long_childrenAmount		:	'number'
+				};
+				ReykjavikForms.messages.validation = jQuery.extend(ReykjavikForms.messages.validation,messages);
+				ReykjavikForms.validationRules = jQuery.extend(ReykjavikForms.validationRules,rules);
+			</script>
+		</ui:define>
+    </ui:composition>
+</div>

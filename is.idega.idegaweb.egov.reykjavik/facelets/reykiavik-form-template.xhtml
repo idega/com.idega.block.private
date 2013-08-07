@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<div 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+   	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:content="http://xmlns.idega.com/com.idega.content"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ic="http://xmlns.idega.com/com.idega.core"
+	xmlns:iuser="http://xmlns.idega.com/com.idega.user">
+	<script>
+		ReykjavikForms.messages.loading = '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['loading']}';
+
+		jQuery.extend(jQuery.validator.messages, {
+		    required: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_fill_this_field']}',
+		    email: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_valid_email']}',
+		    number: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_valid_number']}'
+		});
+		var messages = {
+				string_userName 		: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_your_name']}',
+				string_userPersonalId 	: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_your_personal_id']}',
+				string_userAddress		: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_your_address']}',
+				string_userPostalCode	: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_your_post_code']}',
+				string_userPhone		: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_your_phone']}',
+				string_userEmail		: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_valid_email']}'
+		};
+		var rules = {
+				string_userName : 'required',
+				string_userPersonalId : 'required',
+				string_userAddress : 'required',
+				string_userPostalCode : 'required',
+				string_userPhone : 'required',
+				string_userEmail : {
+					required: true,
+					email: true
+				}
+		};
+		ReykjavikForms.messages.validation = jQuery.extend(ReykjavikForms.messages.validation,messages);
+		ReykjavikForms.validationRules = jQuery.extend(ReykjavikForms.validationRules,rules);
+		jQuery(document).ready(function(){
+			jQuery('.chibaform').validate({
+				rules 		: ReykjavikForms.validationRules,
+				messages 	: ReykjavikForms.messages.validation,
+				ignore  : [], 
+				showErrors : ReykjavikForms.showErrors, 
+				errorPlacement: function(error, element) {
+					var type = element.attr("type");
+					if((type == "checkbox") || (type == "radio")){
+						error.appendTo( element.parents(".threeColumns").first() );
+					}
+					else if(element.prop("tagName") == 'TEXTAREA'){
+						error.appendTo( element.parents(".textarea").first() );
+					} 
+					else error.appendTo( element.parents(".input").first() );
+				 }
+			});
+		});
+	</script>
+	<h:panelGroup layout="block" rendered="#{reykjavikFormRequestBean.iwc.loggedOn}">
+	<div id="chiba-head">
+		<div class="info">
+			<h1>
+		  			#{reykjavikFormRequestBean.processName}
+	        </h1>
+		</div>
+	</div>
+	<div class="chiba-body">
+		<form id="chibaform-id" class="chibaform" name="chibaform" enctype="multipart/form-data" method="POST" onsubmit="return false;" action="http://localhost:8080/FluxHelper?sessionKey=13733714774841" >
+			<div class="switch">
+			<div class="case">
+				<!-- jbpm parameters -->
+				<input type="hidden" name="string_caseDescription" value="#{reykjavikFormRequestBean.caseDescription}" />
+				<input type="hidden" name="processDefinitionId" value="#{param['processDefinitionId']}" />
+				<input type="hidden" name="userId" value="#{reykjavikFormRequestBean.data.id}" />
+				<input type="hidden" name="caseIdentifierNumber" value="#{reykjavikFormRequestBean.caseIdentifierNumber}" />
+				<input type="hidden" name="string_caseIdentifier" value="#{reykjavikFormRequestBean.caseIdentifier}" />
+				<input type="hidden" name="viewId" value="#{reykjavikFormRequestBean.viewId}" />
+				<input type="hidden" name="viewType" value="#{reykjavikFormRequestBean.viewType}" />
+				<input type="hidden" name="prm_case_pk" value="#{reykjavikFormRequestBean.caseId}" />
+				<input type="hidden" name="taskInstanceId" value="#{reykjavikFormRequestBean.taskInstanceId}" />
+				<!-- process parameters -->
+				<div class="fbc_header_text" >
+					<span class="output string enabled readwrite optional valid" ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['general_information']}:</span></span>
+				</div>
+				<div class="input">
+					<label class="label">
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['name']}
+						<span class="required-symbol">*</span>
+					</label>
+					<input name="string_userName" type="text" value="#{reykjavikFormRequestBean.data.name}" class="value"  ></input>
+				</div>
+				<div class="input">
+					<label class="label" >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['personal_id']}
+						<span class="required-symbol">*</span>
+					</label>
+					<input name="string_userPersonalId" type="text" value="#{reykjavikFormRequestBean.data.personalId}" class="value"  ></input>
+				</div>
+				<div class="input" >
+					<label class="label" >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['address']}
+						<span class="required-symbol">*</span>
+					</label>
+					<input name="string_userAddress" type="text" value="#{reykjavikFormRequestBean.data.address}" class="value" ></input>
+				</div>
+				<div class="input" >
+					<label class="label"  >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['post_code']}
+						<span class="required-symbol">*</span>
+					</label>
+					<input name="string_userPostalCode" type="text" value="#{reykjavikFormRequestBean.data.postalCode}" class="value"></input>
+				</div>
+				<div class="input" >
+					<label class="label" >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['phone']}
+						<span class="required-symbol">*</span>
+					</label>
+					<input name="string_userPhone" type="text" value="#{reykjavikFormRequestBean.data.phone}" class="value" ></input>
+				</div>
+				<div class="input" >
+					<label class="label" >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['email']}
+						<span class="required-symbol">*</span>
+					</label>
+					<input name="string_userEmail" type="text" value="#{reykjavikFormRequestBean.data.email}" class="value" ></input>
+				</div>
+				<ui:insert name="process-content" >
+			  		Process form content should go here	
+				</ui:insert>
+			</div>
+			<ui:insert name="more-pages" >
+			  		
+			</ui:insert>
+			</div>
+			<div  class="fbc_button_area">
+				<span class="trigger" style="display:none">
+					<input id="previous-button" type="button"  class="value" value="#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['previous']}"></input>
+				</span>
+				<span class="trigger" style="display:none">
+					<input id="next-button" type="button"  class="value" value="#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['next']}"></input>
+				</span>
+				<h:panelGroup styleClass="trigger" rendered="#{not reykjavikFormRequestBean.readOnly}" >
+					<input type="submit" id="chiba-submit-button" onclick="ReykjavikForms.submitFunction('#chibaform-id');" class="value" value="#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['send']}"></input>
+				</h:panelGroup>
+			</div>
+		</form>
+		<ui:insert name="script" >
+			  		
+		</ui:insert>
+	</div>
+	</h:panelGroup>
+	<h:panelGroup layout="block" rendered="#{not reykjavikFormRequestBean.iwc.loggedOn}">
+		#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['you_must_be_logged_in']}
+	</h:panelGroup>
+</div>

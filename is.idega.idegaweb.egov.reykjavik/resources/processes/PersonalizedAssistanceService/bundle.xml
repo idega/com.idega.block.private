@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<processBundle-config>
+
+    <processBundle 
+        beanIdentifier="casesBPMProcessBundle" 
+        processManagerType="cases" />
+    
+    <tasks>
+        <task 
+            name="Submit New Case" 
+            initial="true">
+            <viewResource 
+                resourceIdentifier="personalized_assistance_service_view" 
+                viewType="custom_reykjavik" />
+        </task>
+    </tasks>
+    
+</processBundle-config>

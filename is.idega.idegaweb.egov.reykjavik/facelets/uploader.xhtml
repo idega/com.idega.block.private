@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:content="http://xmlns.idega.com/com.idega.content"
+	>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+<title></title>
+</head>
+<body>
+<!-- todo make nextUploaderId and currentUploaderId instead of files_attachments to allow multiple uploaders in page -->
+	<ui:composition>
+		<fieldset class="group readwrite optional" id="files_attachments" >
+			<span class="trigger" >
+		    	<input type="button" value="#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['add_attachments']}" class="value add-attachments"/>
+		    </span>
+		   	<table class="repeat uploads-table">
+		   		<tbody>
+		   			<ui:repeat value="#{reykjavikFormRequestBean.data.attachments}" var="attachment">
+			   			<tr class="repeat-item">
+			   				<td>
+			   					<fieldset class="group fileData">
+			   						<div class="input" >
+										<label class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['descriptive_name']}</label>
+										<input type="text" value="#{attachment.fileName}" class="value file-name" />
+									</div>
+									<ui:fragment rendered="#{!reykjavikFormRequestBean.pdf}" >
+										<span class="output">
+											<label class="label" >
+												#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['uploaded_file_name']}
+											</label>
+											<input type="hidden" class="url-input"/>
+											<span class="name-label" ></span>
+										</span>
+										<div class="upload">
+											<div>
+											    <input type="file" class="value"/>
+											</div>
+										</div>
+										<span class="trigger">
+											<input type="button" class="value  remove" 
+											 value="#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['remove']}"/>
+		                            	</span>
+		                            </ui:fragment>
+			   					</fieldset>
+			   				</td>
+			   			</tr>
+		   			</ui:repeat>
+		   		</tbody>
+		   	</table>
+		   	<ui:fragment rendered="#{!reykjavikFormRequestBean.pdf}" >
+			   	<div class="components-div" style="display:none;">
+				<div class="uploader-div">
+					<content:fileUploadViewer allowMultipleFiles="false" autoAddFileInput="false" 
+									autoUpload="true" showUploadedFiles="true" actionAfterUploadedToRepository="ReykjavikForms.afterUpload('#files_attachments')"
+									uploadPath="#{reykjavikServices.attachmentUploadPath}" styleClass="value"
+									formId="chibaform-id"/>
+				</div>
+				<table class="td-div">
+					<tbody>
+						<tr class="repeat-item">
+							<td>
+								<fieldset class="group fileData">
+					 				<div class="input" >
+										<label class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['descriptive_name']}</label>
+										<input type="text" value="" class="value file-name" />
+									</div>
+									<span class="output">
+										<label class="label" >
+											#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['uploaded_file_name']}
+										</label>
+										<span class="name-label" ></span>
+										<input type="hidden" class="url-input"/>
+									</span>
+									<div class="upload">
+										<div>
+											<input type="file" class="value"/>
+										</div>
+									</div>
+									<span class="trigger">
+										<input type="button" class="value remove" 
+										value="#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['remove']}"/>
+					                </span>
+					 			</fieldset>
+			 				</td>
+			 			</tr>
+					</tbody>
+				</table>
+			</div>
+		</ui:fragment>
+		</fieldset>
+		<script>
+			jQuery(document).ready(function(){
+				ReykjavikForms.createUploader('#files_attachments');
+			});
+		</script>
+	</ui:composition>
+</body>
+</html>

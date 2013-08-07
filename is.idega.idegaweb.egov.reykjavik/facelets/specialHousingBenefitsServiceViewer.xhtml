@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<div 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:icore="http://xmlns.idega.com/com.idega.core"
+	xmlns:content="http://xmlns.idega.com/com.idega.content"
+	>
+	<ui:composition template="#{IWURIResource.res['/idegaweb/bundles/is.idega.idegaweb.egov.reykjavik.bundle/facelets/reykiavik-form-template.xhtml']}">
+		<ui:define name="process-content">
+			<div class="fbc_header_text" >
+				<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['spouse']}:</span></span>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['name']}
+				</label>
+				<input name="string_spouseName" type="text" value="#{reykjavikFormRequestBean.data.spouseName}" class="value" ></input>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['personal_id']}
+				</label>
+				<input name="string_spousePersonalId" type="text" value="#{reykjavikFormRequestBean.data.spousePersonalId}" class="value" ></input>
+			</div>
+			#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['i_signed_undersigned_hereby_apply_social']}.<br/>
+			#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['i_authorize_to_obtain_the_information']}.<br/>
+			#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_note']}:
+			<ol>
+				<li>
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['according_to_thespecialhousingbenefits']}:
+					<ul>
+						<li>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['according_to_thespecialhousingbenefits_1_1']}</li>
+						<li>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['according_to_thespecialhousingbenefits_1_2']}</li>
+						<li>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['according_to_thespecialhousingbenefits_1_3']}</li>
+						<li>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['according_to_thespecialhousingbenefits_1_4']}</li>
+						<li>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['according_to_thespecialhousingbenefits_1_5']}</li>
+					</ul>
+				</li>
+				<li>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['for_an_application_to_take_effect_will_be_specialhousingbenefits']}.</li>
+			</ol>
+		</ui:define>
+	</ui:composition>
+</div>

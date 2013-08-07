@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<div 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	>
+<ui:composition template="#{IWURIResource.res['/idegaweb/bundles/is.idega.idegaweb.egov.reykjavik.bundle/facelets/reykiavik-form-template.xhtml']}">
+	<!-- Stage 1 -->
+	<ui:define name="process-content">
+		<ui:include src="#{IWURIResource.res['/idegaweb/bundles/is.idega.idegaweb.egov.reykjavik.bundle/facelets/marital-status.xhtml']}" />
+		<div class="fbc_header_text" >
+			<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['maki']}:</span></span>
+		</div>
+		<div class="input">
+			<label class="label">
+				#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['name']}
+				<span class="required-symbol">*</span>
+			</label>
+			<input name="string_spouseName" type="text" value="#{reykjavikFormRequestBean.data.spouseName}" class="value"  ></input>
+		</div>
+		<div class="input">
+			<label class="label" >
+				#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['personal_id']}
+				<span class="required-symbol">*</span>
+			</label>
+			<input name="string_spousePersonalId" type="text" value="#{reykjavikFormRequestBean.data.spousePersonalId}" class="value"  ></input>
+		</div>
+		<div class="input" >
+			<label class="label" >
+				#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['address']}
+				<span class="required-symbol">*</span>
+			</label>
+			<input name="string_spouseAddress" type="text" value="#{reykjavikFormRequestBean.data.spouseAddress}" class="value" ></input>
+		</div>
+		<div class="input" >
+			<label class="label"  >
+				#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['post_code']}
+				<span class="required-symbol">*</span>
+			</label>
+			<input name="string_spousePostalCode" type="text" value="#{reykjavikFormRequestBean.data.spousePostalCode}" class="value"></input>
+		</div>
+		<div class="input" >
+			<label class="label" >
+				#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['phone']}
+				<span class="required-symbol">*</span>
+			</label>
+			<input name="string_spousePhone" type="text" value="#{reykjavikFormRequestBean.data.spousePhone}" class="value" ></input>
+		</div>
+		<div class="input" >
+			<label class="label" >
+				#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['email']}
+				<span class="required-symbol">*</span>
+			</label>
+			<input name="string_spouseEmail" type="text" value="#{reykjavikFormRequestBean.data.spouseEmail}" class="value" ></input>
+		</div>
+	</ui:define>
+
+	<!-- Stage 2 -->
+	<ui:define name="more-pages">
+		<!--<div class="case">
+		</div>
+		<div class="case preview">
+		</div>
+		-->
+	</ui:define>
+</ui:composition>
+</div>

@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+<ui:composition>
+	<div class="group" id="objlist_contact">
+		<table class="repeat">
+			<tbody>
+				<tr class="repeat-header">
+					<td/>
+					<td>
+						<label class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['name']}</label>
+					</td>
+					<td>
+						<label class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['relation']}</label>
+					</td>
+					<td>
+						<label class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['phone']}</label>
+					</td>
+					<td>
+					</td>
+				</tr>
+				<ui:repeat value="#{reykjavikFormRequestBean.data.contacts}" var="contact">
+					<tr class="repeat-item">
+						<td>
+							<div class="threeColumns">
+								<input  type="checkbox" name="objlist_contact" class="row-check" />
+							</div>
+						</td>
+						<td>
+							<div class="input">
+								<input  type="text" value="#{contact.name}" class="value name" ></input>
+							</div>
+						</td>
+						<td>
+							<div class="input">
+								<input type="text" value="#{contact.relation}" class="value relation" ></input>
+							</div>
+						</td>
+						<td>
+							<div class="input">
+								<input  type="text" value="#{contact.phone}" class="value phone" ></input>
+							</div>
+						</td>
+						<td title="#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['remove']}">
+							<div  class="fbc_button_area" style="padding:0;margin:0;">
+								<span class="trigger" >
+										<input type="button"  class="value delete-btn" value="x"/>
+								</span>
+							</div>
+						</td>
+					</tr>
+				</ui:repeat>
+			</tbody>
+		</table>
+		<div  class="fbc_button_area" style="text-align:left;padding:0;margin:0;">
+			<span class="trigger" title="#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['add']}">
+					<input type="button"  class="value add-btn" value="+"/>
+			</span>
+		</div>
+		<table class="component-div" style="display:none">
+			<tbody>
+				<tr class="repeat-item">
+					<td>
+						<div class="threeColumns">
+							<input  type="checkbox" name="objlist_contact" class="row-check" />
+						</div>
+					</td>
+					<td>
+						<div class="input">
+							<input  type="text" class="value name" ></input>
+						</div>
+					</td>
+					<td>
+						<div class="input">
+							<input type="text" class="value relation" ></input>
+						</div>
+					</td>
+					<td>
+						<div class="input">
+							<input  type="text" class="value phone" ></input>
+						</div>
+					</td>
+					<td title="#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['remove']}">
+						<div  class="fbc_button_area" style="padding:0;margin:0;">
+							<span class="trigger" >
+									<input type="button"  class="value delete-btn" value="x"/>
+							</span>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script>
+			jQuery(document).ready(function(){
+				ReykjavikForms.createContactsList('#objlist_contact');
+			});
+	</script>
+</ui:composition>
+</body>
+</html>

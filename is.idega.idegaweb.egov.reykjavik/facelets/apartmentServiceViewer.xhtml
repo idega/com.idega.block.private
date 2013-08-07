@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<div 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:icore="http://xmlns.idega.com/com.idega.core"
+	>
+	<ui:composition template="#{IWURIResource.res['/idegaweb/bundles/is.idega.idegaweb.egov.reykjavik.bundle/facelets/reykiavik-form-template.xhtml']}">
+ 		<ui:define name="process-content">
+ 			<div class="fbc_header_text" >
+				<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['residency']}:</span></span>
+			</div>
+			<div class="threeColumns">
+				<div class="select">
+					<label class="label" >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['residency']}:
+						<span class="required-symbol">*</span>
+					</label>
+					<span>
+						<span class="selector-item">
+								<ui:fragment rendered="#{reykjavikFormRequestBean.data.residency == 'livingAlone' }" >
+									<input name="string_residency" type="radio" value="livingAlone" class="value" checked="true"></input>
+								</ui:fragment>
+								<ui:fragment rendered="#{reykjavikFormRequestBean.data.residency != 'livingAlone'}">
+									<input name="string_residency" type="radio" value="livingAlone"  class="value" ></input>
+								</ui:fragment>
+								<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['living_alone']}</span>
+						</span>
+						<span class="selector-item">
+								<ui:fragment rendered="#{reykjavikFormRequestBean.data.residency == 'livingWithOthers'}">
+									<input name="string_residency" type="radio" value="livingWithOthers" class="value" checked="true"></input>
+								</ui:fragment>
+								<ui:fragment rendered="#{reykjavikFormRequestBean.data.residency != 'livingWithOthers'}">
+									<input name="string_residency" type="radio" value="livingWithOthers"  class="value" ></input>
+								</ui:fragment>
+								<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['with_others']}</span>
+						</span>
+					</span>
+				</div>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['living_in_the_capital_since']}
+					<span class="required-symbol">*</span>
+				</label>
+				<icore:datePicker keepStatus="true" inputName="date_arrivalToCapitalTime" initialDate="#{reykjavikFormRequestBean.data.arrivalToCapitalTime}" styleClass="value" />
+			</div>
+			<ui:include src="#{IWURIResource.res['/idegaweb/bundles/is.idega.idegaweb.egov.reykjavik.bundle/facelets/marital-status.xhtml']}" />
+			<div class="fbc_header_text" >
+				<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['spouse/cohabiting_partner']}:</span></span>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['name']}
+				</label>
+				<input name="string_spouseName" type="text" value="#{reykjavikFormRequestBean.data.spouseName}" class="value" ></input>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['personal_id']}
+				</label>
+				<input name="string_spousePersonalId" type="text" value="#{reykjavikFormRequestBean.data.spousePersonalId}" class="value" ></input>
+			</div>
+			<div class="fbc_header_text" >
+				<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['closest_relatives']}:</span></span>
+				<span class="required-symbol">*</span>
+			</div>
+			<ui:include src="#{IWURIResource.res['/idegaweb/bundles/is.idega.idegaweb.egov.reykjavik.bundle/facelets/contact-list.xhtml']}" />
+			<div class="fbc_header_text" >
+				<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['children']}:</span></span>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['children_amount']}
+					<span class="required-symbol">*</span>
+				</label>
+				<input name="long_childrenAmount" type="text" value="#{reykjavikFormRequestBean.data.childrenAmount}" class="value" ></input>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['number_of_children_in_the_greater_reykjavik']}
+					<span class="required-symbol">*</span>
+				</label>
+				<input name="long_childrenAmountInReykjavik" type="text" value="#{reykjavikFormRequestBean.data.childrenAmountInReykjavik}" class="value" ></input>
+			</div>
+		</ui:define>
+		<ui:define name="more-pages">
+			<div class="case">
+				<div class="fbc_header_text" >
+					<span >
+						<span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['applied_for']}:</span>
+						<span class="required-symbol">*</span>
+					</span>
+				</div>
+				<div class="threeColumns conditional-selects">
+					<div class="select">
+						<label class="label" >
+						</label>
+						<span class="condition-selector">
+							<span class="selector-item">
+								<ui:fragment rendered="#{reykjavikFormRequestBean.data.locationType == 'desirable'}" >
+									<input name="string_locationType" type="radio" value="desirable" class="value condition clean-fields" checked="true"></input>
+								</ui:fragment>
+								<ui:fragment rendered="#{reykjavikFormRequestBean.data.locationType != 'desirable'}">
+									<input name="string_locationType" type="radio" value="desirable"  class="value condition clean-fields" ></input>
+								</ui:fragment>
+								<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['service_apartments-desirable_location']}:</span>
+								<h:panelGroup styleClass="hiding-element" rendered="#{reykjavikFormRequestBean.data.locationType != 'desirable'}"/>
+								<span class="conditions-div">
+									<h:panelGroup layout="block" >
+										<div class="threeColumns">
+											<div class="select">
+												<label class="label" >
+												</label>
+												<span>
+													<ui:repeat value="#{reykjavikFormRequestBean.data.allDesirableLocations}" var="location">
+														<span class="selector-item">
+															<ui:fragment rendered="#{(reykjavikFormRequestBean.data.locationType == 'desirable') and location.selected}" >
+																<input name="list_locations" type="checkbox" value="#{location.id}" class="value" checked="true"></input>
+															</ui:fragment>
+															<ui:fragment rendered="#{(reykjavikFormRequestBean.data.locationType != 'desirable') or !location.selected}">
+																<input name="list_locations" type="checkbox" value="#{location.id}"  class="value" ></input>
+															</ui:fragment>
+															<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik'][location.name]}</span>
+														</span>
+													</ui:repeat>
+												</span>
+											</div>
+										</div>
+									</h:panelGroup>
+								</span>
+							</span>
+							<span class="selector-item">
+								<ui:fragment rendered="#{reykjavikFormRequestBean.data.locationType == 'rights'}" >
+									<input name="string_locationType" type="radio" value="rights" class="value condition clean-fields" checked="true"></input>
+								</ui:fragment>
+								<ui:fragment rendered="#{reykjavikFormRequestBean.data.locationType != 'rights'}">
+									<input name="string_locationType" type="radio" value="rights"  class="value condition clean-fields" ></input>
+								</ui:fragment>
+								<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['service_apartments_resident_rights']}:</span>
+								<h:panelGroup styleClass="hiding-element" rendered="#{reykjavikFormRequestBean.data.locationType != 'rights'}"/>
+								<span class="conditions-div">
+									<h:panelGroup layout="block" >
+										<div class="threeColumns">
+											<div class="select">
+												<label class="label" >
+												</label>
+												<span>
+													<ui:repeat value="#{reykjavikFormRequestBean.data.allResidentRights}" var="location">
+														<span class="selector-item">
+															<ui:fragment rendered="#{(reykjavikFormRequestBean.data.locationType == 'rights') and location.selected}" >
+																<input name="list_locations" type="checkbox" value="#{location.id}" class="value" checked="true"></input>
+															</ui:fragment>
+															<ui:fragment rendered="#{(reykjavikFormRequestBean.data.locationType != 'rights') or !location.selected}">
+																<input name="list_locations" type="checkbox" value="#{location.id}"  class="value" ></input>
+															</ui:fragment>
+															<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik'][location.name]}</span>
+														</span>
+													</ui:repeat>
+												</span>
+											</div>
+										</div>
+									</h:panelGroup>
+								</span>
+							</span>
+						</span>
+					</div>
+				</div>
+				<div class="fbc_header_text" >
+					<span >
+						<span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['current_housing_conditions']}:</span>
+						<span class="required-symbol">*</span>
+					</span>
+				</div>
+				<div class="threeColumns conditional-selects">
+					<div class="select">
+						<label class="label" >
+						</label>
+						<span class="condition-selector">
+							<ui:repeat value="#{reykjavikFormRequestBean.data.allHousingConditions}" var="contition">
+								<h:panelGroup styleClass="selector-item" rendered="#{!reykjavikFormRequestBean.pdf or contition.selected}">
+									<ui:fragment rendered="#{contition.selected}" >
+										<input name="long_housingCondition" type="radio" value="#{contition.id}" class="value condition clean-fields" checked="true"></input>
+									</ui:fragment>
+									<ui:fragment rendered="#{!contition.selected}">
+										<input name="long_housingCondition" type="radio" value="#{contition.id}"  class="value condition clean-fields" ></input>
+									</ui:fragment>
+									<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik'][contition.name]}</span>
+									<h:panelGroup styleClass="hiding-element" rendered="#{!contition.selected}" />
+										<h:panelGroup layout="block" rendered="#{contition.id == 6}" styleClass="conditions-div lease-conditions">
+											<div class="input" style="margin:0;padding:0;">
+												<label class="label" >
+													#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['period_of_lease']}
+												</label>
+											</div>
+											<div class="input" style="margin-top:0;padding-top:0;margin-bottom:0;padding-bottom:0;">
+												<label class="label" >
+													#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['from']}:
+												</label>
+												<icore:datePicker keepStatus="true" inputName="date_leaseStart" initialDate="#{reykjavikFormRequestBean.data.leaseStart}" styleClass="value" ></icore:datePicker>
+											</div>
+											<div class="input" style="margin-top:0;padding-top:0;">
+												<label class="label" >
+													#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['to']}:
+												</label>
+												<icore:datePicker keepStatus="true" inputName="date_leaseEnd" initialDate="#{reykjavikFormRequestBean.data.leaseEnd}" styleClass="value" ></icore:datePicker>
+											</div>
+											<div class="input" >
+												<label class="label" >
+													#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['monthly_rent_isk']}
+												</label>
+												<input name="long_monthlyRent" type="text" value="#{reykjavikFormRequestBean.data.monthlyRent}" class="value" ></input>
+											</div>
+										</h:panelGroup>
+								</h:panelGroup>
+							</ui:repeat>
+						</span>
+					</div>
+				</div>
+				<div class="fbc_header_text" >
+					<span >
+						<span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['description_of_premises_and_involvement']}:</span>
+					</span>
+				</div>
+				<div class="threeColumns">
+					<div class="select">
+						<label class="label" >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['house_type']}
+							<span class="required-symbol">*</span>
+						</label>
+						<span class="condition-selector">
+							<ui:repeat value="#{reykjavikFormRequestBean.data.allHousetypes}" var="type">
+								<span class="selector-item">
+									<ui:fragment rendered="#{type.selected}" >
+										<input name="long_houseType" type="radio" value="#{type.id}" class="value condition" checked="true"></input>
+									</ui:fragment>
+									<ui:fragment rendered="#{!type.selected}">
+										<input name="long_houseType" type="radio" value="#{type.id}"  class="value condition" ></input>
+									</ui:fragment>
+									<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik'][type.name]}</span>
+									<span class="conditions-div">
+									</span>
+								</span>
+							</ui:repeat>
+						</span>
+					</div>
+				</div>
+				<div class="threeColumns conditional-selects">
+					<div class="select">
+						<label class="label" >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['floor']}
+							<span class="required-symbol">*</span>
+						</label>
+						<span class="condition-selector">
+							<span class="selector-item">
+								<ui:fragment rendered="#{reykjavikFormRequestBean.data.floor == 0}" >
+									<input name="long_floor" type="radio" value="0" class="value condition" checked="true"></input>
+								</ui:fragment>
+								<ui:fragment rendered="#{reykjavikFormRequestBean.data.floor != 0}">
+									<input name="long_floor" type="radio" value="0"  class="value condition" ></input>
+								</ui:fragment>
+								<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['basement']}</span>
+								<span class="conditions-div">
+								</span>
+							</span>
+							<span class="selector-item">
+								<ui:fragment rendered="#{reykjavikFormRequestBean.data.floor == 1}" >
+									<input name="long_floor" type="radio" value="1" class="value condition" checked="true"></input>
+								</ui:fragment>
+								<ui:fragment rendered="#{reykjavikFormRequestBean.data.floor != 1}">
+									<input name="long_floor" type="radio" value="1"  class="value condition" ></input>
+								</ui:fragment>
+								<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['ground_floor']}</span>
+								<span class="conditions-div">
+								</span>
+							</span>
+							<span class="selector-item" >
+								<ui:fragment rendered="#{reykjavikFormRequestBean.data.floor > 1}" >
+									<input name="long_floor" type="radio" class="value condition clean-fields" checked="true"></input>
+								</ui:fragment>
+								<ui:fragment rendered="#{(reykjavikFormRequestBean.data.floor lt 2) or (reykjavikFormRequestBean.data.floor == null)}">
+									<input name="long_floor" type="radio" value=" " class="value condition clean-fields" ></input>
+								</ui:fragment>
+								<ui:fragment rendered="#{!reykjavikFormRequestBean.pdf}" >
+									<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['floor']}</span>
+								</ui:fragment>
+								<h:panelGroup styleClass="hiding-element" rendered="#{(reykjavikFormRequestBean.data.floor lt 2) or (reykjavikFormRequestBean.data.floor == null)}"  style="margin:0;padding:0;width:4em;"/>
+								<span class="conditions-div" >
+									<ui:fragment rendered="#{(reykjavikFormRequestBean.data.floor > 1) || !reykjavikFormRequestBean.pdf}" >
+										<h:panelGroup rendered="#{reykjavikFormRequestBean.data.floor > 1}" styleClass="input" >
+											<input name="long_floor" type="text" value="#{reykjavikFormRequestBean.data.floor}" class="value conditional" 
+													style="margin:0;padding:0;width:4em;" ></input>
+										</h:panelGroup>
+										<h:panelGroup rendered="#{(reykjavikFormRequestBean.data.floor lt 2) or (reykjavikFormRequestBean.data.floor == null)}" styleClass="input" >
+											<input name="long_floor" type="text" class="value conditional" ></input>
+										</h:panelGroup>
+									</ui:fragment>
+								</span>
+							</span>
+						</span>
+					</div>
+				</div>
+				<div class="threeColumns">
+					<div class="select">
+						<label class="label" >
+							#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['elevators']}
+							<span class="required-symbol">*</span>
+						</label>
+						<span class="condition-selector">
+							<ui:repeat value="#{reykjavikFormRequestBean.data.allElevators}" var="type">
+								<span class="selector-item">
+									<ui:fragment rendered="#{type.selected}" >
+										<input name="long_elevators" type="radio" value="#{type.id}" class="value condition" checked="true"></input>
+									</ui:fragment>
+									<ui:fragment rendered="#{!type.selected}">
+										<input name="long_elevators" type="radio" value="#{type.id}"  class="value condition" ></input>
+									</ui:fragment>
+									<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik'][type.name]}</span>
+									<span class="conditions-div">
+									</span>
+								</span>
+							</ui:repeat>
+						</span>
+					</div>
+				</div>
+				<div class="input" >
+					<label class="label" >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['number_of_rooms']}
+						<span class="required-symbol">*</span>
+					</label>
+					<input name="long_roomNumber" type="text" value="#{reykjavikFormRequestBean.data.roomNumber}" class="value" ></input>
+				</div>
+				<div class="textarea">
+					<label class="label" >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['defects_in_housing']}:
+						<span class="required-symbol">*</span>
+					</label>
+					<textarea class="value xFormTextAreaWordMask_limit-initialized" cols="30" rows="5" name="string_housingDefects" >#{reykjavikFormRequestBean.data.housingDefects}</textarea>
+				</div>
+				<div class="textarea">
+					<label class="label" >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['poor_access']}:
+						<span class="required-symbol">*</span>
+					</label>
+					<textarea class="value xFormTextAreaWordMask_limit-initialized" cols="30" rows="5" name="string_poorAccess" >#{reykjavikFormRequestBean.data.poorAccess}</textarea>
+				</div>
+				<div class="fbc_header_text" >
+					<span >
+						<span>
+							#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['applicant_receives_any_the_following_services']}
+							(#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['check_where_applicable']}):
+						</span>
+					</span>
+				</div>
+				<div class="group" id="objlist_services">
+					<table class="repeat">
+						<tbody>
+							<ui:repeat value="#{reykjavikFormRequestBean.data.allServices}" var="service">
+								<ui:fragment rendered="#{(not reykjavikFormRequestBean.pdf) or (service.selected)}">
+									<tr class="repeat-item">
+										<td>
+											<ui:fragment rendered="#{service.selected}" >
+												<input type="checkbox" value="#{service.id}" style="width:auto!important;" class="value service-id check-row" checked="true"></input>
+											</ui:fragment>
+											<ui:fragment rendered="#{!service.selected}">
+												<input  type="checkbox" value="#{service.id}" style="width:auto!important;" class="value service-id check-row" ></input>
+											</ui:fragment>
+										</td>
+										<td>
+											<div class="output">
+										        <label class="output" >#{localizedStrings['is.idega.idegaweb.egov.reykjavik'][service.name]}</label>
+										    </div>
+										</td>
+										<td>
+											<div class="input hide-item">
+												<input  type="text" value="#{service.frequency}" class="value times service-frequency" ></input>
+											</div>
+										</td>
+										<td>
+											<div class="output hide-item">
+										        <label class="output" >#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['times_per_month']}</label>
+										    </div>
+										</td>
+									</tr>
+								</ui:fragment>
+							</ui:repeat>
+						</tbody>
+					</table>
+				</div>
+				<div class="input" >
+					<label class="label" >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['need_help_with']}:
+					</label>
+					<input name="string_helpDescription" type="text" value="#{reykjavikFormRequestBean.data.helpDescription}" class="value" ></input>
+				</div>
+				<div class="fbc_header_text" >
+					<span >
+						<span>
+							#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['doctor']}
+						</span>
+					</span>
+				</div>
+				<div class="input" >
+					<label class="label" >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['name']}:
+					</label>
+					<input name="string_doctorName" type="text" value="#{reykjavikFormRequestBean.data.doctorName}" class="value" ></input>
+				</div>
+				<div class="input" >
+					<label class="label" >
+						#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['phone']}:
+					</label>
+					<input name="string_doctorPhone" type="text" value="#{reykjavikFormRequestBean.data.doctorPhone}" class="value" ></input>
+				</div>
+				<div class="fbc_header_text" >
+					<span >
+						<span>
+							#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['another_applicant_wishes_to_state']}:
+						</span>
+					</span>
+				</div>
+				<div class="textarea">
+					<textarea class="value big-area" cols="30" rows="5" name="string_anotherApplicantStatements" >#{reykjavikFormRequestBean.data.anotherApplicantStatements}</textarea>
+				</div>
+			</div>
+			<div class="case">
+				<div class="fbc_header_text" >
+					<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['attachments']}:</span></span>
+				</div>
+				#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['the_application_shall_include']}:<br/>
+				#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['physician']}<br/>
+				#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['tax_return']},
+				#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['a_certified_copy_from_the_tax_office']}<br/>
+				#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['leases_if_applicable']}<br/>
+				<ui:include src="#{IWURIResource.res['/idegaweb/bundles/is.idega.idegaweb.egov.reykjavik.bundle/facelets/uploader.xhtml']}" />
+			</div>
+			<div class="case preview">
+			</div>
+		</ui:define>
+		<ui:define name="script">
+			<script>
+				jQuery(document).ready(function(){
+					ReykjavikForms.createServiceFrequencyList("#objlist_services");
+				});
+				jQuery.validator.addMethod("contact-check", function(value, element) {
+					return ReykjavikForms.validateContacts(element);
+				});
+				var messages = {
+						string_residency : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_select']}',
+						date_arrivalToCapitalTime : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_valid_date']}',
+						string_maritalStatus : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_select']}',
+						objlist_contact	: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_closest_relatives']}',
+						long_childrenAmount : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_valid_number']}',
+						long_childrenAmountInReykjavik : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_valid_number']}',
+						string_locationType : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_select']}',
+						list_locations : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_select']}',
+						long_housingCondition : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_select']}',
+						date_leaseStart	: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_fill_this_field']}',
+						date_leaseEnd	: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_fill_this_field']}',
+						long_monthlyRent	: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_valid_number']}',
+						long_floor	: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_select']}',
+						long_houseType	: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_select']}',
+						long_floor	: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_select']}',
+						long_elevators	: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_select']}',
+						long_roomNumber	: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_valid_number']}',
+						string_housingDefects	: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_fill_this_field']}',
+						string_poorAccess	: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_fill_this_field']}'
+				};
+				var rules = {
+						string_residency : 'required',
+						date_arrivalToCapitalTime : 'required',
+						string_maritalStatus : 'required',
+						objlist_contact	:	'contact-check',
+						long_childrenAmount : {
+						      required: true,
+						      number: true
+						},
+						long_childrenAmountInReykjavik : {
+						      required: true,
+						      number: true
+						}, 
+						string_locationType : 'required',
+						list_locations : {required: ReykjavikForms.isConditionChecked},
+						long_housingCondition : 'required',
+						date_leaseStart	: {required: ReykjavikForms.isConditionChecked},
+						date_leaseEnd	: {required: ReykjavikForms.isConditionChecked},
+						long_monthlyRent	: {
+							required: ReykjavikForms.isConditionChecked,
+							number: true
+						},
+						long_houseType : 'required',
+						long_floor : {
+						      required:true,
+						      number:true,
+						      'validate-number-checked' : true
+						},
+						long_elevators : 'required',
+						long_roomNumber : {
+						      required:true,
+						      number:true,
+						},
+						string_housingDefects : 'required',
+						string_poorAccess : 'required'
+						
+				};
+				ReykjavikForms.messages.validation = jQuery.extend(ReykjavikForms.messages.validation,messages);
+				ReykjavikForms.validationRules = jQuery.extend(ReykjavikForms.validationRules,rules);
+			</script>
+		</ui:define>
+    </ui:composition>
+</div>

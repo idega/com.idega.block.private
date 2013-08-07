@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<div 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<ui:composition template="#{IWURIResource.res['/idegaweb/bundles/is.idega.idegaweb.egov.reykjavik.bundle/facelets/reykiavik-form-template.xhtml']}">
+ 		<ui:define name="process-content">
+ 			<div class="fbc_header_text" >
+				<span ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['closest_relative']}:</span></span>
+			</div>
+	 		<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['name']}
+					<span class="required-symbol">*</span>
+				</label>
+				<input name="string_relativeName" type="text" value="#{reykjavikFormRequestBean.data.relativeName}" class="value" ></input>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['phone']}
+					<span class="required-symbol">*</span>
+				</label>
+				<input name="string_relativePhone" type="text" value="#{reykjavikFormRequestBean.data.relativePhone}" class="value" ></input>
+			</div>
+			<div class="input" >
+				<label class="label" >
+					#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['relationship']}
+					<span class="required-symbol">*</span>
+				</label>
+				<input name="string_relationship" type="text" value="#{reykjavikFormRequestBean.data.relationship}" class="value" ></input>
+			</div>
+			<div class="fbc_header_text" >
+				<span  ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['food_wanted_for_the_following_days']}:</span></span>
+				<span class="required-symbol">*</span>
+			</div>
+			<div class="threeColumns">
+				<div class="select" >
+					<ui:repeat value="#{reykjavikFormRequestBean.data.deliveryDays}" var="day">
+						<span>
+							<ui:fragment rendered="#{day.deliver}" >
+								<input name="list_deliveryDays" type="checkbox" value="#{day.value}" class="value" checked="true"></input>
+							</ui:fragment>
+							<ui:fragment rendered="#{not day.deliver}">
+								<input name="list_deliveryDays" type="checkbox" value="#{day.value}"  class="value" ></input>
+							</ui:fragment>
+							<span class="label">#{day.name}</span>
+						</span>
+					</ui:repeat>
+				</div>
+			</div>
+			<div class="fbc_header_text" >
+				<span  ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['diets']}:</span></span>
+				<span class="required-symbol">*</span>
+			</div>
+			<div class="threeColumns">
+				<div class="select">
+					<span class="selector-item">
+							<ui:fragment rendered="#{reykjavikFormRequestBean.data.diets == 'general'}" >
+								<input name="list_diets" type="radio" value="general" class="value" checked="true"></input>
+							</ui:fragment>
+							<ui:fragment rendered="#{reykjavikFormRequestBean.data.diets != 'general'}">
+								<input name="list_diets" type="radio" value="general"  class="value" ></input>
+							</ui:fragment>
+							<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['general']}</span>
+					</span>
+					<span class="selector-item">
+						<ui:fragment rendered="#{reykjavikFormRequestBean.data.diets == 'dietic'}" >
+								<input name="list_diets" type="radio" value="dietic" class="value" checked="true"></input>
+							</ui:fragment>
+							<ui:fragment rendered="#{reykjavikFormRequestBean.data.diets != 'dietic'}">
+								<input name="list_diets" type="radio" value="dietic"  class="value" ></input>
+							</ui:fragment>
+						<span class="label">#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['dietic']}</span>
+					</span>
+				</div>
+			</div>
+			<div class="fbc_header_text" >
+				<span  ><span>#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['comments']}:</span></span>
+			</div>
+			<div class="textarea">
+				<textarea class="value xFormTextAreaWordMask_limit-initialized" 
+				style="width:100%!important;height:20.5em"
+				cols="30" rows="5" name="string_foodDeliveryComments" 
+				>#{reykjavikFormRequestBean.data.foodDeliveryComments}</textarea>
+			</div>
+			<script>
+				var messages = {
+						string_relativeName : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_relative_name']}',
+						string_relativePhone : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_relative_phone']}',
+						string_relationship : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_relationship']}',
+						string_relationship : '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_enter_relationship']}',
+						list_deliveryDays	: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_select_delivery_day']}',
+						list_diets			: '#{localizedStrings['is.idega.idegaweb.egov.reykjavik']['please_select_diet']}'
+				};
+				var rules = {
+						string_relativeName : 'required',
+						string_relativePhone : 'required',
+						string_relationship : 'required',
+						string_relationship : 'required',
+						list_deliveryDays	: 'required',
+						list_diets			: 'required'
+				};
+				ReykjavikForms.messages.validation = jQuery.extend(ReykjavikForms.messages.validation,messages);
+				ReykjavikForms.validationRules = jQuery.extend(ReykjavikForms.validationRules,rules);
+			</script>
+		</ui:define>
+    </ui:composition>
+</div>
