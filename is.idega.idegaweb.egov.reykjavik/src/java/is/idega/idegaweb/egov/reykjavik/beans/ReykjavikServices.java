@@ -186,7 +186,7 @@ public class ReykjavikServices extends DefaultSpringBean implements DWRAnnotatio
 				saveFiles(files, taskInstance, iwc);
 				result = true;
 				if (result && !StringUtil.isEmpty(processDefinitionName) && piId != null)
-					ELUtil.getInstance().publishEvent(new ProcessInstanceCreatedEvent(processDefinitionName, piId));
+					ELUtil.getInstance().publishEvent(new ProcessInstanceCreatedEvent(processDefinitionName, piId, null));
 			}else{
 				Integer caseId = Integer.valueOf(params.get(0));
 				Integer taskInstanceId = Integer.valueOf(parameters.get(ProcessConstants.TASK_INSTANCE_ID).get(0)); 
