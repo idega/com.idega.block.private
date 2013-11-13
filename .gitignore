@@ -1,4 +1,8 @@
 target
 .settings
 .DS_Store
+<<<<<<< HEAD
 .project
+=======
+.project
+>>>>>>> f3f0cdaac9b36c9e1ff82467f126792bc2722388
