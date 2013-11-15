@@ -97,12 +97,9 @@
 [submodule "com.idega.travel"]
 	path = com.idega.travel
 	url = git@github.com:idega/com.idega.travel.git
-<<<<<<< HEAD
 [submodule "is.idega.idegaweb.egov.in-sewer-ants"]
 	path = is.idega.idegaweb.egov.in-sewer-ants
 	url = git@github.com:idega/is.idega.idegaweb.egov.in-sewer-ants.git
-=======
 [submodule "is.idega.idegaweb.egov.reykjavik"]
 	path = is.idega.idegaweb.egov.reykjavik
 	url = git@github.com:idega/is.idega.idegaweb.egov.reykjavik.git
->>>>>>> f3f0cdaac9b36c9e1ff82467f126792bc2722388
