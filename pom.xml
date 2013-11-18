@@ -18,7 +18,6 @@
   <description>Parent of all com.idega.block.private group modules</description>
   
   <modules>
-	<module>is.idega.idegaweb.egov.parking</module>
 	<module>com.idega.municipality</module>
 	<module>com.idega.travel</module>
 	<module>is.idega.idegaweb.egov.nest</module>
