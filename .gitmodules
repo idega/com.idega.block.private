@@ -103,3 +103,6 @@
 [submodule "is.idega.idegaweb.egov.reykjavik"]
 	path = is.idega.idegaweb.egov.reykjavik
 	url = git@github.com:idega/is.idega.idegaweb.egov.reykjavik.git
+[submodule "com.idega.parts.hidden"]
+	path = com.idega.parts.hidden
+	url = git@github.com:idega/com.idega.parts.hidden.git
