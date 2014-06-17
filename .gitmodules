@@ -99,4 +99,4 @@
 	url = git@github.com:idega/com.idega.travel.git
 [submodule "is.idega.idegaweb.egov.reykjavik"]
 	path = is.idega.idegaweb.egov.reykjavik
-	url = ./is.idega.idegaweb.egov.reykjavik/
+	url = git@github.com:idega/is.idega.idegaweb.egov.reykjavik.git
