@@ -53,6 +53,7 @@
   	<module>com.idega.egov.hub</module>
   	<module>is.idega.idegaweb.egov.reykjavik</module>
   	<module>com.idega.parts.hidden</module>
+  	<module>is.idega.idegaweb.member.isi</module>
   </modules>
 
   <dependencyManagement>
@@ -264,6 +265,12 @@
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.mentor.vefthjonusta</artifactId>
+  		  <version>5.0.0-SNAPSHOT</version>
+	      <type>jar</type>
+	    </dependency>
+	    <dependency>
+	      <groupId>com.idega.block.private</groupId>
+  		  <artifactId>is.idega.idegaweb.member.isi</artifactId>
   		  <version>5.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
