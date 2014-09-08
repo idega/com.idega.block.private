@@ -106,3 +106,6 @@
 [submodule "is.idega.idegaweb.member.isi"]
 	path = is.idega.idegaweb.member.isi
 	url = git@github.com:idega/is.idega.idegaweb.member.isi.git
+[submodule "se.idega.idegaweb.egov.jarfalla"]
+	path = se.idega.idegaweb.egov.jarfalla
+	url = git@github.com:idega/se.idega.idegaweb.egov.jarfalla.git

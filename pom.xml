@@ -54,6 +54,7 @@
   	<module>is.idega.idegaweb.egov.reykjavik</module>
   	<module>com.idega.parts.hidden</module>
   	<module>is.idega.idegaweb.member.isi</module>
+  	<module>se.idega.idegaweb.egov.jarfalla</module>
   </modules>
 
   <dependencyManagement>
@@ -273,6 +274,12 @@
   		  <artifactId>is.idega.idegaweb.member.isi</artifactId>
   		  <version>5.0.0-SNAPSHOT</version>
 	      <type>jar</type>
+	    </dependency>
+	    <dependency>
+	    	<groupId>com.idega.block.private</groupId>
+	    	<artifactId>se.idega.idegaweb.egov.jarfalla</artifactId>
+	    	<version>5.0.0-SNAPSHOT</version>
+	    	<type>jar</type>
 	    </dependency>
 	</dependencies>
   </dependencyManagement>

@@ -10,8 +10,98 @@
 	<name>Parts hidden</name>
 	<packaging>jar</packaging>
 	<inceptionYear>2013</inceptionYear>
-	<description>Golf</description>
+	<description>parts hidden</description>
 
 	<dependencies>
+		<!-- platform -->
+		<dependency>
+	      <groupId>com.idega.block.platform</groupId>
+	      <artifactId>com.idega.block.article</artifactId>
+	    </dependency>
+		<dependency>
+	      <groupId>com.idega.block.platform</groupId>
+	      <artifactId>com.idega.core</artifactId>
+	    </dependency>
+	    <dependency>
+	    	<groupId>com.idega.block.platform</groupId>
+	    	<artifactId>com.idega.hibernate</artifactId>
+	    </dependency>
+	    <dependency>
+	    	<groupId>com.idega.block.platform</groupId>
+	    	<artifactId>com.idega.user</artifactId>
+	    </dependency>
+	    <dependency>
+	    	<groupId>com.idega.block.platform</groupId>
+	    	<artifactId>com.idega.springframework</artifactId>
+	    </dependency>
+	    <dependency>
+	    	<groupId>com.idega.block.platform</groupId>
+	    	<artifactId>com.idega.dwr</artifactId>
+	    </dependency>
+	    <dependency>
+	    	<groupId>com.idega.block.platform</groupId>
+	    	<artifactId>com.idega.block.navigation</artifactId>
+	    </dependency>
+	    
+	    
+	    <!-- addon -->
+	    <dependency>
+	    	<groupId>com.idega.block.addon</groupId>
+	    	<artifactId>com.idega.block.trade</artifactId>
+	    </dependency>
+	    
+	    <!-- egov -->
+	    <dependency>
+	    	<groupId>com.idega.block.egov</groupId>
+	    	<artifactId>com.idega.company</artifactId>
+	    	<exclusions>
+	    	  <exclusion>
+		        <groupId>com.idega.block.addon</groupId>
+		        <artifactId>org.jboss.jbpm</artifactId>
+	          </exclusion>
+	          <exclusion>
+		        <groupId>com.idega.block.addon</groupId>
+		        <artifactId>com.idega.bpm</artifactId>
+	          </exclusion>
+	          <exclusion>
+		        <groupId>com.idega.block.egov</groupId>
+		        <artifactId>is.idega.idegaweb.egov.message</artifactId>
+	          </exclusion>
+	          <exclusion>
+		        <groupId>com.idega.block.egov</groupId>
+		        <artifactId>is.idega.idegaweb.egov.citizen</artifactId>
+	          </exclusion>
+	          <exclusion>
+		        <groupId>com.idega.block.egov</groupId>
+		        <artifactId>is.idega.idegaweb.egov</artifactId>
+	          </exclusion>
+	          <exclusion>
+		        <groupId>com.idega.block.egov</groupId>
+		        <artifactId>is.idega.block.family</artifactId>
+	          </exclusion>
+	      </exclusions>
+	    </dependency>
+	    
+	    <!-- Third party -->
+	    <dependency>
+	        <groupId>org.hibernate</groupId>
+	        <artifactId>hibernate-search</artifactId>
+	        <version>4.2.0.Final</version>
+	        <type>jar</type>
+      	</dependency>
+      	
+      	<!-- excel -->	
+	      	<dependency>
+	      		<groupId>org.apache.poi</groupId>
+	      		<artifactId>poi-ooxml</artifactId>
+	      		<version>3.10-beta2</version>
+	      	</dependency>
+	      	<dependency>
+	      		<groupId>org.apache.tika</groupId>
+	      		<artifactId>tika-app</artifactId>
+	      		<version>1.4</version>
+	      	</dependency>
+	    <!-- //////// -->
 	</dependencies>
+	
 </project>
