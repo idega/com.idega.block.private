@@ -8,7 +8,6 @@
   
   <groupId>com.idega.block.private</groupId>
   <artifactId>com.idega.block.private</artifactId>
-  <version>5.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <organization>
     <name>idega software</name>
