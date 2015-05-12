@@ -109,3 +109,6 @@
 [submodule "se.idega.idegaweb.egov.jarfalla"]
 	path = se.idega.idegaweb.egov.jarfalla
 	url = git@github.com:idega/se.idega.idegaweb.egov.jarfalla.git
+[submodule "is.idega.idegaweb.egov.odr"]
+	path = is.idega.idegaweb.egov.odr
+	url = git@github.com:idega/is.idega.idegaweb.egov.odr.git
