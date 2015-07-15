@@ -112,3 +112,9 @@
 [submodule "com.idega.golf.api"]
 	path = com.idega.golf.api
 	url = git@github.com:idega/com.idega.golf.api
+[submodule "is.idega.idegaweb.egov.odr"]
+	path = is.idega.idegaweb.egov.odr
+	url = git@github.com:idega/is.idega.idegaweb.egov.odr.git
+[submodule "is.idega.block.finance"]
+	path = is.idega.block.finance
+	url = git@github.com:idega/is.idega.block.finance.git
