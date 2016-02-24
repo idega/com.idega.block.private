@@ -121,3 +121,6 @@
 [submodule "com.idega.member.api"]
 	path = com.idega.member.api
 	url = git@github.com:idega/com.idega.member.api.git
+[submodule "com.idega.idegaweb.member"]
+	path = com.idega.idegaweb.member
+	url = git@github.com:idega/com.idega.idegaweb.member.git
