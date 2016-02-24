@@ -106,9 +106,6 @@
 [submodule "is.idega.idegaweb.member.isi"]
 	path = is.idega.idegaweb.member.isi
 	url = git@github.com:idega/is.idega.idegaweb.member.isi.git
-[submodule "se.idega.idegaweb.egov.jarfalla"]
-	path = se.idega.idegaweb.egov.jarfalla
-	url = git@github.com:idega/se.idega.idegaweb.egov.jarfalla.git
 [submodule "com.idega.golf.api"]
 	path = com.idega.golf.api
 	url = git@github.com:idega/com.idega.golf.api
@@ -121,6 +118,3 @@
 [submodule "com.idega.member.api"]
 	path = com.idega.member.api
 	url = git@github.com:idega/com.idega.member.api.git
-[submodule "com.idega.idegaweb.member"]
-	path = com.idega.idegaweb.member
-	url = git@github.com:idega/com.idega.idegaweb.member.git
