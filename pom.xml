@@ -57,7 +57,6 @@
   	<module>is.idega.idegaweb.egov.odr</module>
   	<module>com.idega.golf.api</module>
   	<module>com.idega.member.api</module>
-  	<module>com.idega.idegaweb.member</module>
   </modules>
 
   <dependencyManagement>
@@ -299,12 +298,6 @@
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>com.idega.member.api</artifactId>
-	    	<version>5.0.0-SNAPSHOT</version>
-	    	<type>jar</type>
-	    </dependency>
-	    <dependency>
-	    	<groupId>com.idega.block.private</groupId>
-	    	<artifactId>com.idega.idegaweb.member</artifactId>
 	    	<version>5.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
