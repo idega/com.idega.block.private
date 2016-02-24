@@ -118,3 +118,9 @@
 [submodule "com.idega.parts.hidden"]
 	path = com.idega.parts.hidden
 	url = git@github.com:idega/com.idega.parts.hidden.git
+[submodule "com.idega.airport.parking"]
+	path = com.idega.airport.parking
+	url = git@github.com:idega/com.idega.airport.parking.git
+[submodule "com.idega.sport.union"]
+	path = com.idega.sport.union
+	url = git@github.com:idega/com.idega.sport.union.git
