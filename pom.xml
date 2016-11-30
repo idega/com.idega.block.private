@@ -56,9 +56,10 @@
   	<module>is.idega.block.finance</module>
   	<module>is.idega.idegaweb.egov.odr</module>
   	<module>com.idega.golf.api</module>
-  <!--	<module>com.idega.member.api</module> -->
+    <module>is.banking</module>
   	<module>com.idega.sport.union</module>
   	<module>com.idega.airport.parking</module>
+  	<module>com.idega.member.api</module>
   </modules>
 
   <dependencyManagement>
@@ -297,12 +298,12 @@
 	    	<version>5.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
-	    <!-- <dependency>
-	    	<groupId>com.idega.block.private</groupId>
-	    	<artifactId>com.idega.member.api</artifactId>
-	    	<version>5.0.0-SNAPSHOT</version>
-	    	<type>jar</type>
-	    </dependency> -->
+	    <dependency>
+	      <groupId>com.idega.block.private</groupId>
+  		  <artifactId>is.banking</artifactId>
+  		  <version>5.0.0-SNAPSHOT</version>
+	      <type>jar</type>
+	    </dependency>
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>com.idega.sport.union</artifactId>
@@ -312,6 +313,12 @@
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>com.idega.airport.parking</artifactId>
+	    	<version>5.0.0-SNAPSHOT</version>
+	    	<type>jar</type>
+	    </dependency>
+	    <dependency>
+	    	<groupId>com.idega.block.private</groupId>
+	    	<artifactId>com.idega.member.api</artifactId>
 	    	<version>5.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>

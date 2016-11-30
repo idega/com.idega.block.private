@@ -124,3 +124,6 @@
 [submodule "com.idega.sport.union"]
 	path = com.idega.sport.union
 	url = git@github.com:idega/com.idega.sport.union.git
+[submodule "is.banking"]
+	path = is.banking
+	url = git@github.com:idega/is.banking.git
