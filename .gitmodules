@@ -121,3 +121,6 @@
 [submodule "is.banking"]
 	path = is.banking
 	url = git@github.com:idega/is.banking.git
+[submodule "is.idega.idegaweb.egov.fsk"]
+	path = is.idega.idegaweb.egov.fsk
+	url = git@github.com:idega/is.idega.idegaweb.egov.fsk.git
