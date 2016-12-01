@@ -39,12 +39,10 @@
 	<module>is.idega.idegaweb.golf.block.login</module>
 	<module>is.idega.idegaweb.golf.block.image</module>
 	<module>is.idega.idegaweb.egov.propertytax</module>
-	<module>is.idega.idegaweb.egov.tenders</module>
 	<module>is.idega.idegaweb.egov.church</module>
 	<module>is.idega.idegaweb.egov.course.adult</module>
 	<module>is.idega.idegaweb.egov.iptv</module>
 	<module>is.idega.idegaweb.egov.in-sewer-ants</module>
-	<module>com.idega.telecom</module>
 	<module>is.idega.block.pki</module>
 	<module>is.idega.idegaweb.egov.afterschoolcare</module>
 	<module>is.idega.idegaweb.egov.blueprints</module>
@@ -59,6 +57,7 @@
     <module>is.banking</module>
   	<module>com.idega.sport.union</module>
   	<module>com.idega.airport.parking</module>
+  	<module>is.idega.idegaweb.egov.fsk</module>
   	<module>com.idega.member.api</module>
   </modules>
 
@@ -228,12 +227,6 @@
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
-  		  <artifactId>is.idega.idegaweb.egov.tenders</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
-	      <type>jar</type>
-	    </dependency>
-	    <dependency>
-	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.church</artifactId>
   		  <version>5.0.0-SNAPSHOT</version>
 	      <type>jar</type>
@@ -247,12 +240,6 @@
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.iptv</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
-	      <type>jar</type>
-	    </dependency>
-	    <dependency>
-	      <groupId>com.idega.block.private</groupId>
-  		  <artifactId>com.idega.telecom</artifactId>
   		  <version>5.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
@@ -315,6 +302,12 @@
 	    	<artifactId>com.idega.airport.parking</artifactId>
 	    	<version>5.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
+	    </dependency>
+	    <dependency>
+	      <groupId>com.idega.block.private</groupId>
+  		  <artifactId>is.idega.idegaweb.egov.fsk</artifactId>
+  		  <version>5.0.0-SNAPSHOT</version>
+	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
