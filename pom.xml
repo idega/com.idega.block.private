@@ -3,7 +3,7 @@
   <parent>
   	<groupId>com.idega.block.egov</groupId>
   	<artifactId>com.idega.block.egov</artifactId>
-  	<version>5.0.0-SNAPSHOT</version>
+  	<version>6.0.0-SNAPSHOT</version>
   </parent>  
   
   <groupId>com.idega.block.private</groupId>
@@ -66,253 +66,253 @@
 		<dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>com.idega.municipality</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.nest</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>com.idega.egov.hub</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.impra</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.health.directorate</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.musicschool</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.parking</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.gumbo</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.childcare.linna</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.block.pki</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.golf</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
           <groupId>com.idega.block.private</groupId>
           <artifactId>is.idega.idegaweb.egov.in-sewer-ants</artifactId>
-          <version>5.0.0-SNAPSHOT</version>
+          <version>6.0.0-SNAPSHOT</version>
           <type>jar</type>
         </dependency>
         <dependency>
             <groupId>com.idega.block.private</groupId>
             <artifactId>is.idega.idegaweb.egov.reykjavik</artifactId>
-            <version>5.0.0-SNAPSHOT</version>
+            <version>6.0.0-SNAPSHOT</version>
             <type>jar</type>
 	    </dependency>
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>com.idega.parts.hidden</artifactId>
-	    	<version>5.0.0-SNAPSHOT</version>
+	    	<version>6.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.childcare</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.sweatshop</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.school</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.grub</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.schoolmeal</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.childcare.rvk</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.schoolmeal.rvk</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.travel</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.afterschoolcare.rvk</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.course.weighers</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.golf.block.login</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.golf.block.image</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.propertytax</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.church</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.course.adult</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.iptv</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.afterschoolcare</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.blueprints</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.mentor.vefthjonusta</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.member.isi</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>is.idega.block.finance</artifactId>
-	    	<version>5.0.0-SNAPSHOT</version>
+	    	<version>6.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>is.idega.idegaweb.egov.odr</artifactId>
-	    	<version>5.0.0-SNAPSHOT</version>
+	    	<version>6.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>com.idega.golf.api</artifactId>
-	    	<version>5.0.0-SNAPSHOT</version>
+	    	<version>6.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.banking</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>com.idega.sport.union</artifactId>
-	    	<version>5.0.0-SNAPSHOT</version>
+	    	<version>6.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>com.idega.airport.parking</artifactId>
-	    	<version>5.0.0-SNAPSHOT</version>
+	    	<version>6.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.fsk</artifactId>
-  		  <version>5.0.0-SNAPSHOT</version>
+  		  <version>6.0.0-SNAPSHOT</version>
 	      <type>jar</type>
 	    </dependency>
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>com.idega.member.api</artifactId>
-	    	<version>5.0.0-SNAPSHOT</version>
+	    	<version>6.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
 	</dependencies>
