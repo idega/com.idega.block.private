@@ -57,8 +57,9 @@
   	<module>com.idega.sport.union</module>
   	<module>com.idega.airport.parking</module>
   	<module>is.idega.idegaweb.egov.fsk</module>
-  	<module>com.idega.member.api</module>
   	<module>com.idega.cases.management</module>
+  	<module>com.idega.fast.search</module>
+  	<module>com.idega.member.api</module>
   </modules>
 
   <dependencyManagement>
@@ -305,13 +306,19 @@
 	    </dependency>
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
-	    	<artifactId>com.idega.member.api</artifactId>
+	    	<artifactId>com.idega.cases.management</artifactId>
 	    	<version>5.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
-	    	<artifactId>com.idega.cases.management</artifactId>
+	    	<artifactId>com.idega.fast.search</artifactId>
+	    	<version>5.0.0-SNAPSHOT</version>
+	    	<type>jar</type>
+	    </dependency>
+	    <dependency>
+	    	<groupId>com.idega.block.private</groupId>
+	    	<artifactId>com.idega.member.api</artifactId>
 	    	<version>5.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>

@@ -124,3 +124,6 @@
 [submodule "com.idega.cases.management"]
 	path = com.idega.cases.management
 	url = git@github.com:idega/com.idega.cases.management.git
+[submodule "com.idega.fast.search"]
+	path = com.idega.fast.search
+	url = git@github.com:idega/com.idega.fast.search.git
