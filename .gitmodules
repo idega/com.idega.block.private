@@ -127,3 +127,6 @@
 [submodule "com.idega.fast.search"]
 	path = com.idega.fast.search
 	url = git@github.com:idega/com.idega.fast.search.git
+[submodule "com.idega.egov.dashboard"]
+	path = com.idega.egov.dashboard
+	url = git@github.com:idega/com.idega.egov.dashboard.git
