@@ -127,3 +127,6 @@
 [submodule "com.idega.fast.search"]
 	path = com.idega.fast.search
 	url = git@github.com:idega/com.idega.fast.search.git
+[submodule "com.idega.camunda"]
+	path = com.idega.camunda
+	url = https://github.com/idega/com.idega.camunda.git
