@@ -130,3 +130,6 @@
 [submodule "com.idega.camunda"]
 	path = com.idega.camunda
 	url = https://github.com/idega/com.idega.camunda.git
+[submodule "com.idega.egov.dashboard"]
+	path = com.idega.egov.dashboard
+	url = git@github.com:idega/com.idega.egov.dashboard.git

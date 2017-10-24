@@ -59,6 +59,7 @@
   	<module>is.idega.idegaweb.egov.fsk</module>
   	<module>com.idega.cases.management</module>
   	<module>com.idega.fast.search</module>
+  	<module>com.idega.egov.dashboard</module>
   	<module>com.idega.member.api</module>
   </modules>
 
@@ -316,6 +317,12 @@
 	    	<version>5.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
+	    <dependency>
+        	<groupId>com.idega.block.private</groupId>
+            <artifactId>com.idega.egov.dashboard</artifactId>
+            <version>5.0.0-SNAPSHOT</version>
+            <type>jar</type>
+        </dependency>
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>com.idega.member.api</artifactId>
