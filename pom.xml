@@ -59,7 +59,8 @@
   	<module>is.idega.idegaweb.egov.fsk</module>
   	<module>com.idega.cases.management</module>
   	<module>com.idega.fast.search</module>
-  	<module>com.idega.egov.dashboard</module>
+  	<module>com.idega.camunda</module>
+	<module>com.idega.egov.dashboard</module>
   	<module>com.idega.member.api</module>
   </modules>
 
