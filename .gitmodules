@@ -73,9 +73,6 @@
 [submodule "is.idega.idegaweb.egov.iptv"]
 	path = is.idega.idegaweb.egov.iptv
 	url = git@github.com:idega/is.idega.idegaweb.egov.iptv.git
-[submodule "is.idega.block.pki"]
-	path = is.idega.block.pki
-	url = git@github.com:idega/is.idega.block.pki.git
 [submodule "is.idega.idegaweb.egov.afterschoolcare"]
 	path = is.idega.idegaweb.egov.afterschoolcare
 	url = git@github.com:idega/is.idega.idegaweb.egov.afterschoolcare.git
