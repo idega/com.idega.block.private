@@ -130,3 +130,6 @@
 [submodule "com.idega.egov.dashboard"]
 	path = com.idega.egov.dashboard
 	url = git@github.com:idega/com.idega.egov.dashboard.git
+[submodule "com.idega.kopavogur.parking"]
+	path = com.idega.kopavogur.parking
+	url = git@github.com:idega/com.idega.kopavogur.parking.git
