@@ -62,6 +62,7 @@
 	<module>com.idega.egov.dashboard</module>
   	<module>com.idega.member.api</module>
   	<module>com.idega.kopavogur.parking</module>
+  	<module>se.idega.cybercom.flen</module>
   </modules>
 
   <dependencyManagement>
@@ -333,6 +334,12 @@
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>com.idega.kopavogur.parking</artifactId>
+	    	<version>5.0.0-SNAPSHOT</version>
+	    	<type>jar</type>
+	    </dependency>
+	    <dependency>
+	    	<groupId>com.idega.block.private</groupId>
+	    	<artifactId>se.idega.cybercom.flen</artifactId>
 	    	<version>5.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
