@@ -136,3 +136,6 @@
 [submodule "se.idega.cybercom.flen"]
 	path = se.idega.cybercom.flen
 	url = git@github.com:idega/se.idega.cybercom.flen.git
+[submodule "com.idega.member.connect.api"]
+	path = com.idega.member.connect.api
+	url = git@github.com:valdaszem/com.idega.member.connect.api.git
