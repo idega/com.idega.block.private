@@ -64,6 +64,7 @@
   	<module>com.idega.kopavogur.parking</module>
   	<module>se.idega.cybercom.flen</module>
   	<module>com.idega.member.connect.api</module>
+  	<module>com.idega.cloud.process</module>
   </modules>
 
   <dependencyManagement>
@@ -347,6 +348,12 @@
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>com.idega.member.connect.api</artifactId>
+	    	<version>5.0.0-SNAPSHOT</version>
+	    	<type>jar</type>
+	    </dependency>
+	    <dependency>
+	    	<groupId>com.idega.block.private</groupId>
+	    	<artifactId>com.idega.cloud.process</artifactId>
 	    	<version>5.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
