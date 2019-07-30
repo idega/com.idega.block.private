@@ -139,3 +139,6 @@
 [submodule "com.idega.member.connect.api"]
 	path = com.idega.member.connect.api
 	url = git@github.com:valdaszem/com.idega.member.connect.api.git
+[submodule "com.idega.cloud.process"]
+	path = com.idega.cloud.process
+	url = git@github.com:idega/com.idega.cloud.process.git
