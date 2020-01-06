@@ -142,3 +142,6 @@
 [submodule "com.idega.cloud.process"]
 	path = com.idega.cloud.process
 	url = git@github.com:idega/com.idega.cloud.process.git
+[submodule "com.idega.seltjarnarnes.parking"]
+	path = com.idega.seltjarnarnes.parking
+	url = git@github.com:idega/com.idega.seltjarnarnes.parking.git
