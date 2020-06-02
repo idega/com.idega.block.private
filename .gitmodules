@@ -1,147 +1,196 @@
 [submodule "is.idega.idegaweb.egov.parking"]
 	path = is.idega.idegaweb.egov.parking
 	url = git@github.com:idega/is.idega.idegaweb.egov.parking.git
+	ignore = all
 [submodule "com.idega.municipality"]
 	path = com.idega.municipality
 	url = git@github.com:idega/com.idega.municipality.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.health.directorate"]
 	path = is.idega.idegaweb.egov.health.directorate
 	url = git@github.com:idega/is.idega.idegaweb.egov.health.directorate.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.musicschool"]
 	path = is.idega.idegaweb.egov.musicschool
 	url = git@github.com:idega/is.idega.idegaweb.egov.musicschool.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.gumbo"]
 	path = is.idega.idegaweb.egov.gumbo
 	url = git@github.com:idega/is.idega.idegaweb.egov.gumbo.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.impra"]
 	path = is.idega.idegaweb.egov.impra
 	url = git@github.com:idega/is.idega.idegaweb.egov.impra.git
+	ignore = all
 [submodule "is.idega.idegaweb.golf"]
 	path = is.idega.idegaweb.golf
 	url = git@github.com:idega/is.idega.idegaweb.golf.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.childcare"]
 	path = is.idega.idegaweb.egov.childcare
 	url = git@github.com:idega/is.idega.idegaweb.egov.childcare.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.sweatshop"]
 	path = is.idega.idegaweb.egov.sweatshop
 	url = git@github.com:idega/is.idega.idegaweb.egov.sweatshop.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.school"]
 	path = is.idega.idegaweb.egov.school
 	url = git@github.com:idega/is.idega.idegaweb.egov.school.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.grub"]
 	path = is.idega.idegaweb.egov.grub
 	url = git@github.com:idega/is.idega.idegaweb.egov.grub.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.nest"]
 	path = is.idega.idegaweb.egov.nest
 	url = git@github.com:idega/is.idega.idegaweb.egov.nest.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.schoolmeal"]
 	path = is.idega.idegaweb.egov.schoolmeal
 	url = git@github.com:idega/is.idega.idegaweb.egov.schoolmeal.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.childcare.rvk"]
 	path = is.idega.idegaweb.egov.childcare.rvk
 	url = git@github.com:idega/is.idega.idegaweb.egov.childcare.rvk.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.childcare.linna"]
 	path = is.idega.idegaweb.egov.childcare.linna
 	url = git@github.com:idega/is.idega.idegaweb.egov.childcare.linna.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.schoolmeal.rvk"]
 	path = is.idega.idegaweb.egov.schoolmeal.rvk
 	url = git@github.com:idega/is.idega.idegaweb.egov.schoolmeal.rvk.git
+	ignore = all
 [submodule "is.idega.travel"]
 	path = is.idega.travel
 	url = git@github.com:idega/is.idega.travel.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.afterschoolcare.rvk"]
 	path = is.idega.idegaweb.egov.afterschoolcare.rvk
 	url = git@github.com:idega/is.idega.idegaweb.egov.afterschoolcare.rvk.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.course.weighers"]
 	path = is.idega.idegaweb.egov.course.weighers
 	url = git@github.com:idega/is.idega.idegaweb.egov.course.weighers.git
+	ignore = all
 [submodule "com.idega.egov.hub"]
 	path = com.idega.egov.hub
 	url = git@github.com:idega/com.idega.egov.hub.git
+	ignore = all
 [submodule "is.idega.idegaweb.golf.block.login"]
 	path = is.idega.idegaweb.golf.block.login
 	url = git@github.com:idega/is.idega.idegaweb.golf.block.login.git
+	ignore = all
 [submodule "is.idega.idegaweb.golf.block.image"]
 	path = is.idega.idegaweb.golf.block.image
 	url = git@github.com:idega/is.idega.idegaweb.golf.block.image.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.propertytax"]
 	path = is.idega.idegaweb.egov.propertytax
 	url = git@github.com:idega/is.idega.idegaweb.egov.propertytax.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.course.adult"]
 	path = is.idega.idegaweb.egov.course.adult
 	url = git@github.com:idega/is.idega.idegaweb.egov.course.adult.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.iptv"]
 	path = is.idega.idegaweb.egov.iptv
 	url = git@github.com:idega/is.idega.idegaweb.egov.iptv.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.afterschoolcare"]
 	path = is.idega.idegaweb.egov.afterschoolcare
 	url = git@github.com:idega/is.idega.idegaweb.egov.afterschoolcare.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.blueprints"]
 	path = is.idega.idegaweb.egov.blueprints
 	url = git@github.com:idega/is.idega.idegaweb.egov.blueprints.git
+	ignore = all
 [submodule "is.mentor.vefthjonusta"]
 	path = is.mentor.vefthjonusta
 	url = git@github.com:idega/is.mentor.vefthjonusta.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.in-sewer-ants"]
 	path = is.idega.idegaweb.egov.in-sewer-ants
 	url = git@github.com:idega/is.idega.idegaweb.egov.in-sewer-ants.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.reykjavik"]
 	path = is.idega.idegaweb.egov.reykjavik
 	url = git@github.com:idega/is.idega.idegaweb.egov.reykjavik.git
+	ignore = all
 [submodule "is.idega.idegaweb.member.isi"]
 	path = is.idega.idegaweb.member.isi
 	url = git@github.com:idega/is.idega.idegaweb.member.isi.git
+	ignore = all
 [submodule "com.idega.golf.api"]
 	path = com.idega.golf.api
 	url = git@github.com:idega/com.idega.golf.api
+	ignore = all
 [submodule "is.idega.idegaweb.egov.odr"]
 	path = is.idega.idegaweb.egov.odr
 	url = git@github.com:idega/is.idega.idegaweb.egov.odr.git
+	ignore = all
 [submodule "is.idega.block.finance"]
 	path = is.idega.block.finance
 	url = git@github.com:idega/is.idega.block.finance.git
+	ignore = all
 [submodule "com.idega.member.api"]
 	path = com.idega.member.api
 	url = git@github.com:idega/com.idega.member.api.git
+	ignore = all
 [submodule "com.idega.parts.hidden"]
 	path = com.idega.parts.hidden
 	url = git@github.com:idega/com.idega.parts.hidden.git
+	ignore = all
 [submodule "com.idega.airport.parking"]
 	path = com.idega.airport.parking
 	url = git@github.com:idega/com.idega.airport.parking.git
+	ignore = all
 [submodule "com.idega.sport.union"]
 	path = com.idega.sport.union
 	url = git@github.com:idega/com.idega.sport.union.git
+	ignore = all
 [submodule "is.banking"]
 	path = is.banking
 	url = git@github.com:idega/is.banking.git
+	ignore = all
 [submodule "is.idega.idegaweb.egov.fsk"]
 	path = is.idega.idegaweb.egov.fsk
 	url = git@github.com:idega/is.idega.idegaweb.egov.fsk.git
+	ignore = all
 [submodule "com.idega.cases.management"]
 	path = com.idega.cases.management
 	url = git@github.com:idega/com.idega.cases.management.git
+	ignore = all
 [submodule "com.idega.fast.search"]
 	path = com.idega.fast.search
 	url = git@github.com:idega/com.idega.fast.search.git
+	ignore = all
 [submodule "com.idega.camunda"]
 	path = com.idega.camunda
-	url = https://github.com/idega/com.idega.camunda.git
+	url = git@github.com:idega/com.idega.camunda.git
+	ignore = all
 [submodule "com.idega.egov.dashboard"]
 	path = com.idega.egov.dashboard
 	url = git@github.com:idega/com.idega.egov.dashboard.git
+	ignore = all
 [submodule "com.idega.kopavogur.parking"]
 	path = com.idega.kopavogur.parking
 	url = git@github.com:idega/com.idega.kopavogur.parking.git
+	ignore = all
 [submodule "se.idega.cybercom.flen"]
 	path = se.idega.cybercom.flen
 	url = git@github.com:idega/se.idega.cybercom.flen.git
+	ignore = all
 [submodule "com.idega.member.connect.api"]
 	path = com.idega.member.connect.api
 	url = git@github.com:valdaszem/com.idega.member.connect.api.git
+	ignore = all
 [submodule "com.idega.cloud.process"]
 	path = com.idega.cloud.process
 	url = git@github.com:idega/com.idega.cloud.process.git
+	ignore = all
 [submodule "com.idega.seltjarnarnes.parking"]
 	path = com.idega.seltjarnarnes.parking
 	url = git@github.com:idega/com.idega.seltjarnarnes.parking.git
+	ignore = all
