@@ -54,15 +54,12 @@
   	<module>com.idega.golf.api</module>
     <module>is.banking</module>
   	<module>com.idega.sport.union</module>
-  	<module>com.idega.airport.parking</module>
   	<module>is.idega.idegaweb.egov.fsk</module>
   	<module>com.idega.cases.management</module>
-  	<module>com.idega.fast.search</module>
   	<module>com.idega.camunda</module>
 	<module>com.idega.egov.dashboard</module>
   	<module>com.idega.member.api</module>
   	<module>com.idega.kopavogur.parking</module>
-  	<module>se.idega.cybercom.flen</module>
   	<module>com.idega.member.connect.api</module>
   	<module>com.idega.cloud.process</module>
   	<module>com.idega.seltjarnarnes.parking</module>
@@ -293,12 +290,6 @@
 	    	<type>jar</type>
 	    </dependency>
 	    <dependency>
-	    	<groupId>com.idega.block.private</groupId>
-	    	<artifactId>com.idega.airport.parking</artifactId>
-	    	<version>5.0.0-SNAPSHOT</version>
-	    	<type>jar</type>
-	    </dependency>
-	    <dependency>
 	      <groupId>com.idega.block.private</groupId>
   		  <artifactId>is.idega.idegaweb.egov.fsk</artifactId>
   		  <version>5.0.0-SNAPSHOT</version>
@@ -307,12 +298,6 @@
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>com.idega.cases.management</artifactId>
-	    	<version>5.0.0-SNAPSHOT</version>
-	    	<type>jar</type>
-	    </dependency>
-	    <dependency>
-	    	<groupId>com.idega.block.private</groupId>
-	    	<artifactId>com.idega.fast.search</artifactId>
 	    	<version>5.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
@@ -337,12 +322,6 @@
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>com.idega.kopavogur.parking</artifactId>
-	    	<version>5.0.0-SNAPSHOT</version>
-	    	<type>jar</type>
-	    </dependency>
-	    <dependency>
-	    	<groupId>com.idega.block.private</groupId>
-	    	<artifactId>se.idega.cybercom.flen</artifactId>
 	    	<version>5.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
