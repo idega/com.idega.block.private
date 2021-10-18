@@ -63,6 +63,7 @@
   	<module>com.idega.member.connect.api</module>
   	<module>com.idega.cloud.process</module>
   	<module>com.idega.seltjarnarnes.parking</module>
+  	<module>is.idega.idegaweb.egov.anr</module>
   </modules>
 
   <dependencyManagement>
@@ -340,6 +341,12 @@
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>com.idega.seltjarnarnes.parking</artifactId>
+	    	<version>5.0.0-SNAPSHOT</version>
+	    	<type>jar</type>
+	    </dependency>
+	    <dependency>
+	    	<groupId>com.idega.block.private</groupId>
+	    	<artifactId>is.idega.idegaweb.egov.anr</artifactId>
 	    	<version>5.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>

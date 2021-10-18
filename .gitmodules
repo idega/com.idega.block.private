@@ -194,3 +194,6 @@
 	path = com.idega.seltjarnarnes.parking
 	url = git@github.com:idega/com.idega.seltjarnarnes.parking.git
 	ignore = all
+[submodule "is.idega.idegaweb.egov.anr"]
+	path = is.idega.idegaweb.egov.anr
+	url = git@github.com:idega/is.idega.idegaweb.egov.anr.git
