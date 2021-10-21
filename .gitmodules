@@ -197,3 +197,6 @@
 [submodule "is.idega.idegaweb.egov.anr"]
 	path = is.idega.idegaweb.egov.anr
 	url = git@github.com:idega/is.idega.idegaweb.egov.anr.git
+[submodule "com.idega.akureyri.parking"]
+	path = com.idega.akureyri.parking
+	url = git@github.com:idega/com.idega.akureyri.parking.git
