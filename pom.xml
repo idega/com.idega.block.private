@@ -65,6 +65,7 @@
   	<module>com.idega.seltjarnarnes.parking</module>
   	<module>is.idega.idegaweb.egov.anr</module>
   	<module>com.idega.akureyri.parking</module>
+  	<module>com.idega.travel</module>
   </modules>
 
   <dependencyManagement>
@@ -354,6 +355,12 @@
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>com.idega.akureyri.parking</artifactId>
+	    	<version>5.0.0-SNAPSHOT</version>
+	    	<type>jar</type>
+	    </dependency>
+	    <dependency>
+	    	<groupId>com.idega.block.private</groupId>
+	    	<artifactId>com.idega.travel</artifactId>
 	    	<version>5.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>

@@ -200,3 +200,6 @@
 [submodule "com.idega.akureyri.parking"]
 	path = com.idega.akureyri.parking
 	url = git@github.com:idega/com.idega.akureyri.parking.git
+[submodule "com.idega.travel"]
+	path = com.idega.travel
+	url = git@github.com:idega/com.idega.travel.git
