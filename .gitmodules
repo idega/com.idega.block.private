@@ -203,3 +203,6 @@
 [submodule "com.idega.travel"]
 	path = com.idega.travel
 	url = git@github.com:idega/com.idega.travel.git
+[submodule "is.idega.science.park.parking"]
+	path = is.idega.science.park.parking
+	url = git@github.com:idega/is.idega.science.park.parking.git
