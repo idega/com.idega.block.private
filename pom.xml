@@ -67,6 +67,7 @@
   	<module>com.idega.akureyri.parking</module>
   	<module>com.idega.travel</module>
   	<module>is.idega.science.park.parking</module>
+  	<module>is.idega.landspitali.parking</module>
   </modules>
 
   <dependencyManagement>
@@ -368,6 +369,12 @@
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>is.idega.science.park.parking</artifactId>
+	    	<version>5.0.0-SNAPSHOT</version>
+	    	<type>jar</type>
+	    </dependency>
+	    <dependency>
+	    	<groupId>com.idega.block.private</groupId>
+	    	<artifactId>is.idega.landspitali.parking</artifactId>
 	    	<version>5.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>

@@ -206,3 +206,6 @@
 [submodule "is.idega.science.park.parking"]
 	path = is.idega.science.park.parking
 	url = git@github.com:idega/is.idega.science.park.parking.git
+[submodule "is.idega.landspitali.parking"]
+	path = is.idega.landspitali.parking
+	url = git@github.com:idega/is.idega.landspitali.parking.git
