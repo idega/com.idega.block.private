@@ -212,3 +212,6 @@
 [submodule "is.idega.reykjavik.parking"]
 	path = is.idega.reykjavik.parking
 	url = git@github.com:idega/is.idega.reykjavik.parking.git
+[submodule "com.idega.parking.camera"]
+	path = com.idega.parking.camera
+	url = git@github.com:idega/com.idega.parking.camera.git
