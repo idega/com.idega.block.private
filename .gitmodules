@@ -215,3 +215,6 @@
 [submodule "com.idega.parking.camera"]
 	path = com.idega.parking.camera
 	url = ../com.idega.parking.camera.git
+[submodule "com.idega.recognition"]
+	path = com.idega.recognition
+	url = git@github.com:idega/com.idega.recognition.git
