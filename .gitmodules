@@ -217,7 +217,7 @@
 	url = ../com.idega.parking.camera.git
 [submodule "com.idega.recognition"]
 	path = com.idega.recognition
-	url = git@github.com:idega/com.idega.recognition.git
+	url = ../com.idega.recognition.git
 [submodule "is.idega.hafnarfjordur.parking"]
 	path = is.idega.hafnarfjordur.parking
-	url = git@github.com:idega/is.idega.hafnarfjordur.parking.git
+	url = ../is.idega.hafnarfjordur.parking.git
