@@ -72,6 +72,7 @@
   	<module>com.idega.parking.camera</module>
   	<module>com.idega.recognition</module>
   	<module>is.idega.hafnarfjordur.parking</module>
+  	<module>com.idega.municipal.asset</module>
   </modules>
 
   <dependencyManagement>
@@ -403,6 +404,12 @@
 	    <dependency>
 	    	<groupId>com.idega.block.private</groupId>
 	    	<artifactId>is.idega.hafnarfjordur.parking</artifactId>
+	    	<version>5.0.0-SNAPSHOT</version>
+	    	<type>jar</type>
+	    </dependency>
+	    <dependency>
+	    	<groupId>com.idega.block.private</groupId>
+	    	<artifactId>com.idega.municipal.asset</artifactId>
 	    	<version>5.0.0-SNAPSHOT</version>
 	    	<type>jar</type>
 	    </dependency>
